@@ -270,33 +270,34 @@ header.scrolled{
   backdrop-filter:blur(16px) saturate(140%);
   border-bottom:1px solid rgba(168,168,168,.15);
 }
-.nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:20px; }
-.logo{ display:flex; align-items:center; gap:12px; }
+.nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:nowrap; }
+.logo{ display:flex; align-items:center; gap:10px; min-width:0; flex-shrink:0; }
 .logo-mark{
-  width:42px; height:42px; border-radius:50%;
+  width:38px; height:38px; border-radius:50%;
   border:1px solid rgba(212,175,55,.5);
   display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-head); font-weight:800; font-size:15px;
+  font-family:var(--font-head); font-weight:800; font-size:13px;
   background:linear-gradient(160deg,rgba(212,175,55,.12),transparent);
   color:var(--gold-champagne);
   flex-shrink:0;
 }
-.logo-text{ display:flex; flex-direction:column; line-height:1.1; }
+.logo-text{ display:flex; flex-direction:column; line-height:1.15; white-space:nowrap; min-width:0; }
 .logo-text .lt1{
-  font-family:var(--font-head); font-weight:700; font-size:16px; letter-spacing:.06em;
+  font-family:var(--font-head); font-weight:700; font-size:clamp(11.5px,1vw,14px); letter-spacing:.04em; white-space:nowrap;
 }
-.logo-text .lt2{ font-size:9.5px; letter-spacing:.28em; text-transform:uppercase; color:var(--silver); }
+.logo-text .lt2{ font-size:8.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--silver); white-space:nowrap; }
 
-nav.main-nav{ display:flex; align-items:center; gap:2px; }
+nav.main-nav{ display:flex; align-items:center; gap:0; flex-shrink:1; }
 nav.main-nav a{
   position:relative;
-  padding:10px 16px;
-  font-size:12.5px;
+  padding:10px 11px;
+  font-size:11.5px;
   font-weight:600;
-  letter-spacing:.05em;
+  letter-spacing:.03em;
   text-transform:uppercase;
   color:var(--silver-bright);
   transition:color .3s;
+  white-space:nowrap;
 }
 nav.main-nav a::after{
   content:'';
@@ -309,8 +310,8 @@ nav.main-nav a:hover{ color:var(--chrome-white); }
 nav.main-nav a:hover::after, nav.main-nav a.active::after{ transform:scaleX(1); }
 nav.main-nav a.active{ color:var(--gold-champagne); }
 
-.nav-actions{ display:flex; align-items:center; gap:14px; }
-.nav-cta{ display:inline-flex; }
+.nav-actions{ display:flex; align-items:center; gap:14px; flex-shrink:0; }
+.nav-cta{ display:inline-flex; padding:12px 20px !important; font-size:11px !important; }
 .hamburger{
   display:none; flex-direction:column; gap:5px; width:26px; z-index:1200;
   background:none; border:none;
@@ -338,54 +339,42 @@ nav.main-nav a.active{ color:var(--gold-champagne); }
 .mobile-nav a:hover{ color:var(--gold-champagne); }
 .mobile-nav .btn{ margin-top:24px; }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero (compact split layout) ---------- */
 .hero{
-  position:relative; height:100svh; min-height:640px; width:100%;
-  display:flex; align-items:flex-end;
+  position:relative; width:100%;
+  min-height:100svh;
+  display:flex; align-items:center;
   overflow:hidden;
-  perspective:1400px;
-}
-.hero-media{ position:absolute; inset:-4% -4% -4% -4%; will-change:transform; }
-.hero-media img{
-  width:100%; height:100%; object-fit:cover; object-position:center 35%;
-  transform:scale(1.08);
-}
-.hero-overlay{
-  position:absolute; inset:0;
+  padding:clamp(110px,16vh,150px) 0 clamp(40px,6vh,60px);
   background:
-    linear-gradient(180deg, rgba(5,5,5,.55) 0%, rgba(5,5,5,.28) 32%, rgba(5,5,5,.55) 68%, rgba(5,5,5,.95) 100%),
-    linear-gradient(90deg, rgba(5,5,5,.55) 0%, transparent 35%, transparent 65%, rgba(5,5,5,.55) 100%);
+    radial-gradient(ellipse 900px 500px at 85% 20%, rgba(212,175,55,.08), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 5% 90%, rgba(168,168,168,.06), transparent 60%),
+    var(--black-deep);
 }
-.hero-grain{
-  position:absolute; inset:0; pointer-events:none; opacity:.5; mix-blend-mode:overlay;
-  background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
-  background-size:3px 3px;
+.hero-bg-lines{
+  position:absolute; inset:0; pointer-events:none; opacity:.35; z-index:0;
+  background-image:linear-gradient(rgba(214,214,214,.06) 1px, transparent 1px);
+  background-size:100% 64px;
+  mask-image:linear-gradient(180deg, transparent, black 30%, black 70%, transparent);
 }
-.hero-frame{
-  position:absolute; inset:22px;
-  border:1px solid rgba(214,214,214,.22);
-  pointer-events:none;
-}
-.hero-frame::before,.hero-frame::after{
-  content:''; position:absolute; width:38px; height:38px;
-  border:1px solid var(--gold-champagne); opacity:.8;
-}
-.hero-frame::before{ top:-1px; left:-1px; border-right:none; border-bottom:none; }
-.hero-frame::after{ bottom:-1px; right:-1px; border-left:none; border-top:none; }
 
-.hero-content{
-  position:relative; z-index:5; width:100%;
-  padding:0 0 clamp(50px,8vw,90px);
+.hero-grid{
+  position:relative; z-index:3;
+  display:grid; grid-template-columns:1.05fr .95fr;
+  gap:clamp(30px,5vw,64px);
+  align-items:center;
+  width:100%;
 }
-.hero-content .container{ display:flex; flex-direction:column; gap:22px; }
+
+.hero-text{ display:flex; flex-direction:column; gap:18px; }
 .hero-eyebrow{
-  font-size:12px; letter-spacing:.35em; text-transform:uppercase; color:var(--gold-champagne);
+  font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-champagne);
   display:flex; align-items:center; gap:12px;
 }
-.hero-eyebrow::before{ content:''; width:44px; height:1px; background:var(--gold); }
+.hero-eyebrow::before{ content:''; width:36px; height:1px; background:var(--gold); flex-shrink:0; }
 
 .hero-title{
-  font-size:clamp(48px,9.4vw,124px);
+  font-size:clamp(32px,4.6vw,62px);
   text-transform:uppercase;
   overflow:hidden;
 }
@@ -393,12 +382,60 @@ nav.main-nav a.active{ color:var(--gold-champagne); }
 .hero-title .line span{ display:inline-block; will-change:transform; }
 
 .hero-sub{
-  max-width:560px; font-size:clamp(15px,1.6vw,18px); color:var(--silver-bright); font-weight:400;
+  max-width:480px; font-size:clamp(14.5px,1.3vw,16.5px); color:var(--silver-bright); font-weight:400;
 }
-.hero-btns{ display:flex; flex-wrap:wrap; gap:16px; margin-top:8px; }
+.hero-btns{ display:flex; flex-wrap:wrap; gap:14px; margin-top:6px; }
+
+.hero-mini-info{
+  display:flex; flex-wrap:wrap; gap:20px 28px; margin-top:22px; padding-top:22px;
+  border-top:1px solid rgba(168,168,168,.15);
+}
+.hero-mini-info .hmi-item{ display:flex; align-items:center; gap:10px; }
+.hero-mini-info .hmi-item i{ color:var(--gold); font-size:15px; }
+.hero-mini-info .hmi-item span{ font-size:12px; letter-spacing:.05em; color:var(--silver-bright); }
+
+/* image side */
+.hero-image-wrap{ position:relative; }
+.hero-image-frame{
+  position:relative; border-radius:6px; overflow:hidden;
+  border:1px solid rgba(214,214,214,.22);
+  box-shadow:0 40px 90px -28px rgba(0,0,0,.85), 0 0 0 1px rgba(212,175,55,.08);
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+.hero-image-frame img{
+  width:100%; height:clamp(280px,38vw,480px); object-fit:cover; object-position:center 30%;
+  transition:transform 1.2s var(--ease-lux);
+}
+.hero-image-frame:hover img{ transform:scale(1.05); }
+.hero-image-frame-corner{
+  position:absolute; width:26px; height:26px; border:1px solid var(--gold-champagne); opacity:.9; pointer-events:none; z-index:3;
+}
+.hero-image-frame-corner.tl{ top:10px; left:10px; border-right:none; border-bottom:none; }
+.hero-image-frame-corner.br{ bottom:10px; right:10px; border-left:none; border-top:none; }
+.hero-image-sheen{
+  position:absolute; inset:0; pointer-events:none; opacity:0; z-index:2;
+  background:linear-gradient(120deg, transparent 40%, rgba(255,255,255,.22) 50%, transparent 60%);
+  background-size:220% 220%; background-position:120% 0;
+  transition:opacity .5s;
+}
+.hero-image-frame:hover .hero-image-sheen{ opacity:1; animation:sheen 1.4s var(--ease-lux); }
+.hero-image-badge{
+  position:absolute; left:-18px; bottom:-18px; z-index:4;
+  background:var(--charcoal); border:1px solid rgba(212,175,55,.4);
+  padding:14px 20px; border-radius:2px;
+  box-shadow:0 20px 50px -20px rgba(0,0,0,.7);
+}
+.hero-image-badge .num{ font-family:var(--font-head); font-size:22px; font-weight:800; }
+.hero-image-badge .lbl{ font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--silver); }
+.hero-image-tag{
+  position:absolute; top:-14px; right:16px; z-index:4;
+  font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-champagne);
+  background:var(--black-rich); border:1px solid rgba(212,175,55,.35); padding:8px 14px; border-radius:20px;
+}
 
 .scroll-cue{
-  position:absolute; bottom:26px; left:50%; transform:translateX(-50%); z-index:6;
+  position:absolute; bottom:20px; left:50%; transform:translateX(-50%); z-index:6;
   display:flex; flex-direction:column; align-items:center; gap:8px;
   color:var(--silver);
   font-size:10px; letter-spacing:.3em; text-transform:uppercase;
@@ -416,15 +453,29 @@ nav.main-nav a.active{ color:var(--gold-champagne); }
 
 /* floating geometric elements */
 .floater{
-  position:absolute; pointer-events:none; opacity:.55; z-index:4;
+  position:absolute; pointer-events:none; opacity:.4; z-index:1;
 }
 .floater.ring{
-  width:120px; height:120px; border-radius:50%;
-  border:1px solid rgba(212,175,55,.4);
+  width:110px; height:110px; border-radius:50%;
+  border:1px solid rgba(212,175,55,.35);
 }
-.floater.ring2{ width:70px; height:70px; border:1px solid rgba(214,214,214,.3); border-radius:50%; }
-.floater.line{ width:1px; height:140px; background:linear-gradient(rgba(214,214,214,.35),transparent); }
-.floater.frame{ width:80px; height:110px; border:1px solid rgba(212,175,55,.35); }
+.floater.ring2{ width:60px; height:60px; border:1px solid rgba(214,214,214,.25); border-radius:50%; }
+.floater.line{ width:1px; height:120px; background:linear-gradient(rgba(214,214,214,.3),transparent); }
+.floater.frame{ width:70px; height:96px; border:1px solid rgba(212,175,55,.3); }
+
+@media (max-width:900px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero-image-wrap{ order:-1; max-width:420px; margin:0 auto; }
+  .hero-image-frame img{ height:clamp(220px,60vw,320px); }
+  .hero-text{ text-align:left; }
+  .hero-image-badge{ left:-10px; bottom:-14px; padding:10px 16px; }
+  .hero{ padding-top:clamp(100px,20vh,130px); }
+}
+@media (max-width:480px){
+  .hero-btns{ flex-direction:column; align-items:stretch; }
+  .hero-btns .btn{ width:100%; }
+  .hero-mini-info{ gap:14px 20px; }
+}
 
 /* ================= ABOUT ================= */
 .about-grid{
@@ -837,10 +888,12 @@ footer{ background:var(--black-rich); padding-top:clamp(60px,8vw,90px); position
   .location-wrap{ grid-template-columns:1fr; }
 }
 
-@media (max-width:860px){
+@media (max-width:1180px){
   nav.main-nav{ display:none; }
   .hamburger{ display:flex; }
   .nav-cta.desktop-only{ display:none; }
+}
+@media (max-width:860px){
   .compare-wrap{ grid-template-columns:1fr; }
   .compare-divider{ display:none; }
   .footer-top{ grid-template-columns:1fr 1fr; }
@@ -937,34 +990,52 @@ footer{ background:var(--black-rich); padding-top:clamp(60px,8vw,90px); position
 
   <!-- ============ HERO ============ -->
   <section class="hero" aria-label="Barkat Market Heights hero">
-    <div class="hero-media" id="heroMedia">
-      <img src="img1.png" alt="Front elevation of Barkat Market Heights premium boys' residence building in Lahore">
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-grain"></div>
-    <div class="hero-frame"></div>
+    <div class="hero-bg-lines"></div>
 
-    <div class="floater ring" style="top:14%; left:8%;"></div>
-    <div class="floater ring2" style="top:26%; right:10%;"></div>
-    <div class="floater line" style="top:10%; right:22%;"></div>
-    <div class="floater frame" style="bottom:30%; left:5%;"></div>
+    <div class="floater ring" style="top:14%; left:4%;"></div>
+    <div class="floater ring2" style="top:70%; left:10%;"></div>
+    <div class="floater line" style="top:8%; left:46%;"></div>
+    <div class="floater frame" style="bottom:8%; right:44%;"></div>
 
-    <div class="hero-content">
-      <div class="container">
-        <div class="hero-eyebrow">Premium Boys&rsquo; Residence &mdash; Lahore</div>
-        <h1 class="hero-title">
-          <span class="line"><span>LIVE HIGHER.</span></span>
-          <span class="line"><span class="gold-text">LIVE BETTER.</span></span>
-        </h1>
-        <p class="hero-sub">A premium boys&rsquo; residence designed for comfort, convenience, security, and a better way of living &mdash; where hostel living meets five-star comfort.</p>
-        <div class="hero-btns">
-          <a class="btn btn-gold magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer">
-            <span>Register for Residence</span><i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a class="btn btn-outline magnetic" href="#residence">
-            <span>Explore the Property</span><i class="fa-solid fa-arrow-down"></i>
-          </a>
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-text">
+          <div class="hero-eyebrow">Premium Boys&rsquo; Residence &mdash; Lahore</div>
+          <h1 class="hero-title">
+            <span class="line"><span>LIVE HIGHER.</span></span>
+            <span class="line"><span class="gold-text">LIVE BETTER.</span></span>
+          </h1>
+          <p class="hero-sub">A premium boys&rsquo; residence designed for comfort, convenience, security, and a better way of living &mdash; where hostel living meets five-star comfort.</p>
+          <div class="hero-btns">
+            <a class="btn btn-gold magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer">
+              <span>Register for Residence</span><i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a class="btn btn-outline magnetic" href="#residence">
+              <span>Explore the Property</span><i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+          <div class="hero-mini-info">
+            <div class="hmi-item"><i class="fa-solid fa-location-dot"></i><span>New Garden Town, Lahore</span></div>
+            <div class="hmi-item"><i class="fa-solid fa-shield-halved"></i><span>24/7 Secure &amp; Managed</span></div>
+            <div class="hmi-item"><i class="fa-solid fa-phone"></i><span>0323 4540454</span></div>
+          </div>
         </div>
+
+        <div class="hero-image-wrap" id="heroMedia">
+          <span class="hero-image-tag">Front Elevation</span>
+          <div class="hero-image-frame">
+            <img src="img1.png" alt="Front elevation of Barkat Market Heights premium boys' residence building in Lahore">
+            <div class="hero-image-sheen"></div>
+            <div class="hero-image-frame-corner tl"></div>
+            <div class="hero-image-frame-corner br"></div>
+          </div>
+          <div class="hero-image-badge">
+            <div class="num gold-text">5★</div>
+            <div class="lbl">Inspired Living</div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -1607,26 +1678,30 @@ footer{ background:var(--black-rich); padding-top:clamp(60px,8vw,90px); position
     gsap.fromTo('.hero-eyebrow', {opacity:0, y:20}, {opacity:1, y:0, duration:1, delay:0.1, ease:'power3.out'});
     gsap.fromTo('.hero-sub', {opacity:0, y:20}, {opacity:1, y:0, duration:1, delay:0.9, ease:'power3.out'});
     gsap.fromTo('.hero-btns', {opacity:0, y:20}, {opacity:1, y:0, duration:1, delay:1.05, ease:'power3.out'});
-    gsap.fromTo('.hero-frame', {opacity:0}, {opacity:1, duration:1.2, delay:.3});
+    gsap.fromTo('.hero-mini-info', {opacity:0, y:20}, {opacity:1, y:0, duration:1, delay:1.15, ease:'power3.out'});
+    gsap.fromTo('.hero-image-wrap', {opacity:0, x:40}, {opacity:1, x:0, duration:1.2, delay:.4, ease:'power3.out'});
     gsap.fromTo('.scroll-cue', {opacity:0}, {opacity:1, duration:1, delay:1.6});
   }
 
   /* ===================== HERO PARALLAX / 3D TILT ===================== */
   const heroMedia = document.getElementById('heroMedia');
+  const heroFrame = document.querySelector('.hero-image-frame');
   const heroSection = document.querySelector('.hero');
-  if(!reduceMotion && heroSection){
-    heroSection.addEventListener('mousemove', e=>{
-      const rect = heroSection.getBoundingClientRect();
+  if(!reduceMotion && heroMedia && heroFrame && window.matchMedia('(hover:hover)').matches){
+    heroMedia.addEventListener('mousemove', e=>{
+      const rect = heroMedia.getBoundingClientRect();
       const px = (e.clientX - rect.left)/rect.width - 0.5;
       const py = (e.clientY - rect.top)/rect.height - 0.5;
-      gsap.to(heroMedia, { x: px*26, y: py*18, rotateY: px*3, rotateX: -py*2, duration:1.2, ease:'power2.out' });
+      gsap.to(heroFrame, { rotateY: px*8, rotateX: -py*8, duration:1, ease:'power2.out', transformPerspective:900 });
     });
-    heroSection.addEventListener('mouseleave', ()=>{
-      gsap.to(heroMedia, { x:0, y:0, rotateY:0, rotateX:0, duration:1 });
+    heroMedia.addEventListener('mouseleave', ()=>{
+      gsap.to(heroFrame, { rotateY:0, rotateX:0, duration:1 });
     });
-    // subtle scroll parallax
-    gsap.to(heroMedia, {
-      yPercent: 12, ease:'none',
+  }
+  if(!reduceMotion && heroFrame){
+    // subtle scroll parallax on the image itself
+    gsap.to(heroFrame.querySelector('img'), {
+      yPercent: 8, ease:'none',
       scrollTrigger:{ trigger:heroSection, start:'top top', end:'bottom top', scrub:true }
     });
   }
