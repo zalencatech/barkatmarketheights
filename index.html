@@ -18,7 +18,9 @@
     --gold-bright:#CBA155;
     --gold-pale:#E9D6A0;
     --line: rgba(59,42,30,0.14);
-    --header-h: 58px;
+    --header-h: 66px;
+    --panel:#D9BE84;
+    --panel-deep:#C9A75F;
   }
   *{box-sizing:border-box;}
   html{ scroll-behavior:smooth; }
@@ -41,29 +43,30 @@
     align-items:center;
     gap:18px;
     padding:0 20px;
-    background:rgba(251,246,234,0.92);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--gold-pale);
+    background:linear-gradient(180deg, var(--panel), var(--panel-deep));
+    border-bottom:1px solid var(--gold);
   }
-  .brand{ display:flex; align-items:center; gap:9px; flex:0 0 auto; }
+  .brand{ display:flex; align-items:center; gap:11px; flex:0 0 auto; }
   .brand .logo-mark{
-    width:32px;height:32px;border-radius:50%;
-    border:1px solid var(--gold);
+    width:42px;height:42px;border-radius:50%;
+    border:1.5px solid var(--coffee-deep);
     object-fit:cover;
+    background:var(--cream);
   }
   .brand-text h1{
     color:var(--coffee-deep);
-    font-size:1rem;
+    font-size:1.22rem;
     line-height:1;
     white-space:nowrap;
   }
   .brand-text p{
-    margin:1px 0 0;
-    font-size:.58rem;
+    margin:2px 0 0;
+    font-size:.62rem;
     letter-spacing:.2em;
-    color:var(--gold);
+    color:var(--coffee-deep);
     text-transform:uppercase;
     font-weight:500;
+    opacity:.8;
   }
   .site-nav{
     display:flex;
@@ -76,20 +79,22 @@
     font-size:.72rem;
     letter-spacing:.08em;
     text-transform:uppercase;
-    color:var(--espresso);
+    color:var(--coffee-deep);
     padding:6px 12px;
     border-radius:3px;
     white-space:nowrap;
+    opacity:.82;
   }
-  .site-nav a:hover{ color:var(--gold); }
+  .site-nav a:hover{ opacity:1; }
   .site-nav a.active{
     color:var(--coffee-deep);
-    background:var(--gold-pale);
+    background:var(--cream);
+    opacity:1;
   }
   .btn-register{
     flex:0 0 auto;
-    background:var(--gold-bright);
-    color:var(--coffee-deep);
+    background:var(--coffee-deep);
+    color:var(--gold-pale);
     font-weight:600;
     font-size:.72rem;
     letter-spacing:.02em;
@@ -192,6 +197,29 @@
     border-radius:2px;
     white-space:nowrap;
   }
+  .stat-row{
+    margin-top:16px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+  }
+  .stat{
+    background:var(--coffee-deep);
+    color:var(--gold-pale);
+    border-radius:3px;
+    padding:10px 6px;
+    text-align:center;
+    font-size:.66rem;
+    letter-spacing:.03em;
+  }
+  .stat span{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.15rem;
+    font-weight:700;
+    color:var(--gold-pale);
+    margin-bottom:2px;
+  }
   .home-media{ text-align:center; }
   .home-media .frame{
     width:100%;
@@ -230,6 +258,9 @@
     padding:10px 22px;
     border-radius:3px;
   }
+  .loc-highlights{ margin-top:18px; display:flex; flex-direction:column; gap:6px; }
+  .loc-highlights .lh{ font-size:.78rem; color:var(--espresso); }
+  .loc-highlights .lh span{ color:var(--gold); margin-right:6px; }
   .loc-media .frame{
     width:100%; max-height:44vh;
     border:1px solid var(--gold);
@@ -241,6 +272,7 @@
   /* ---------- PRICING ---------- */
   .section-head{ text-align:center; margin-bottom:clamp(12px,2.5vh,22px); }
   .section-head h2{ font-size:clamp(1.3rem,2.4vw,1.9rem); font-weight:500; }
+  .section-sub{ font-size:.82rem; color:var(--espresso); margin-top:6px; }
   .price-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -362,30 +394,58 @@
 
   /* ---------- FOOTER NAV ---------- */
   .site-footer{
-    background:var(--cream-deep);
-    border-top:1px solid var(--gold-pale);
+    background:linear-gradient(0deg, var(--panel), var(--panel-deep));
+    border-top:1px solid var(--gold);
+    padding:18px 14px 14px;
+  }
+  .footer-top{
+    max-width:1280px;
+    margin:0 auto 14px;
+    display:grid;
+    grid-template-columns:1.2fr 1fr 1fr;
+    gap:20px;
+    padding-bottom:14px;
+    border-bottom:1px solid rgba(36,24,17,0.2);
+  }
+  .footer-col h4{ font-size:.85rem; color:var(--coffee-deep); margin-bottom:8px; }
+  .footer-col p, .footer-col a{
+    display:block;
+    font-size:.76rem;
+    color:var(--coffee-deep);
+    opacity:.85;
+    line-height:1.8;
+  }
+  .footer-nav-row{
     display:flex;
     align-items:center;
     justify-content:center;
     gap:4px;
     flex-wrap:wrap;
-    padding:12px 14px;
   }
-  .site-footer a{
+  .site-footer a.foot-link{
     font-size:.68rem;
     letter-spacing:.08em;
     text-transform:uppercase;
-    color:var(--espresso);
+    color:var(--coffee-deep);
     padding:6px 12px;
     border-radius:3px;
+    opacity:.82;
   }
-  .site-footer a.active{ color:var(--coffee-deep); background:var(--gold-pale); }
+  .site-footer a.foot-link.active{ color:var(--coffee-deep); background:var(--cream); opacity:1; }
+  .footer-copy{
+    text-align:center;
+    font-size:.68rem;
+    color:var(--coffee-deep);
+    opacity:.7;
+    margin-top:10px;
+  }
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:900px){
     #home .page-inner, #location .page-inner, #contact .page-inner{
       grid-template-columns:1fr;
     }
+    .footer-top{ grid-template-columns:1fr; gap:12px; }
     .home-media .frame, .loc-media .frame{ max-height:30vh; }
     .price-grid{ grid-template-columns:repeat(2,1fr); }
     .fac-grid{ grid-template-columns:repeat(3,1fr); }
@@ -393,7 +453,8 @@
     .gallery-grid .g-main{ grid-column:1 / 3; grid-row:1; aspect-ratio:3/4; }
   }
   @media (max-width:640px){
-    :root{ --header-h:96px; }
+    :root{ --header-h:104px; }
+    .stat-row{ grid-template-columns:repeat(2,1fr); }
     .site-header{ flex-wrap:wrap; height:auto; padding:8px 12px; row-gap:6px; }
     .brand{ flex:1 1 auto; }
     .btn-register{ order:2; }
@@ -450,6 +511,13 @@
             <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book Now</a>
           </div>
         </div>
+
+        <div class="stat-row">
+          <div class="stat"><span>4</span>Room Plans</div>
+          <div class="stat"><span>24/7</span>Security &amp; CCTV</div>
+          <div class="stat"><span>10+</span>Premium Facilities</div>
+          <div class="stat"><span>Oct 1</span>Opening 2026</div>
+        </div>
       </div>
 
       <div class="home-media">
@@ -467,6 +535,12 @@
         <h2>Prime Address</h2>
         <p>Barkat Market, New Garden Town, Lahore, Punjab, Pakistan — between Garden Town and Johar Town.</p>
         <a class="btn-map" href="https://www.google.com/maps/place/Barkat+market+heights+(Boys+hostel+and+male+residence)/@31.4993217,74.3191458,17z/data=!3m1!4b1!4m6!3m5!1s0x3919051c338ee383:0x7b12a7c89c9768d0!8m2!3d31.4993172!4d74.3217261!16s%2Fg%2F11nr3hbwfp?entry=ttu&g_ep=EgoyMDI2MDkyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">See on Maps</a>
+
+        <div class="loc-highlights">
+          <div class="lh"><span>&#9679;</span>Minutes from Garden Town &amp; Johar Town</div>
+          <div class="lh"><span>&#9679;</span>Surrounded by cafés, restaurants &amp; markets</div>
+          <div class="lh"><span>&#9679;</span>Easy access to main city roads</div>
+        </div>
       </div>
       <div class="loc-media">
         <div class="frame"><img src="loc.png" alt="Location map view"></div>
@@ -538,6 +612,7 @@
       <div class="section-head">
         <span class="eyebrow-gold">Premium Facilities</span>
         <h2>Everything Included</h2>
+        <p class="section-sub">Every plan comes fully equipped — no hidden extras, just move in and settle down.</p>
       </div>
       <div class="fac-grid">
         <div class="fac-item"><div class="dot">F</div><p>Fully Furnished Rooms</p></div>
@@ -582,16 +657,36 @@
 </main>
 
 <footer class="site-footer" id="navBottom">
-  <a href="#home" data-target="home" class="active">Home</a>
-  <a href="#location" data-target="location">Location</a>
-  <a href="#pricing" data-target="pricing">Pricing</a>
-  <a href="#gallery" data-target="gallery">Gallery</a>
-  <a href="#facilities" data-target="facilities">Facilities</a>
-  <a href="#contact" data-target="contact">Contact</a>
+  <div class="footer-top">
+    <div class="footer-col">
+      <h4>Barkat Market Heights</h4>
+      <p>A premium managed residence for professionals, students and overseas Pakistanis in New Garden Town, Lahore.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="tel:03299922200">0329 9922200</a>
+      <a href="https://wa.me/923086430502" target="_blank" rel="noopener">WhatsApp: +92 308 6430502</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxx_TUIaHdz9Gw23WXYt-Ez6sXSn2c4PHyB3_QPnFo-c7Blg/viewform?usp=send_form" target="_blank" rel="noopener">Register online</a>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <p>Main Barkat Market, New Garden Town, Lahore, Punjab, Pakistan</p>
+      <p>Operational from 1st October, 2026</p>
+    </div>
+  </div>
+  <nav class="footer-nav-row">
+    <a href="#home" data-target="home" class="foot-link active">Home</a>
+    <a href="#location" data-target="location" class="foot-link">Location</a>
+    <a href="#pricing" data-target="pricing" class="foot-link">Pricing</a>
+    <a href="#gallery" data-target="gallery" class="foot-link">Gallery</a>
+    <a href="#facilities" data-target="facilities" class="foot-link">Facilities</a>
+    <a href="#contact" data-target="contact" class="foot-link">Contact</a>
+  </nav>
+  <p class="footer-copy">© 2026 Barkat Market Heights — Premium Boys' Residence. All rights reserved.</p>
 </footer>
 
 <script>
-  const navLinks = document.querySelectorAll('.site-nav a, .site-footer a');
+  const navLinks = document.querySelectorAll('.site-nav a, .site-footer a.foot-link');
   const sections = document.querySelectorAll('section.page');
 
   function setActive(id){
