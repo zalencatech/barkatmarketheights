@@ -2,1867 +2,675 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Barkat Market Heights — Premium Boys' Residence | Lahore</title>
-<meta name="description" content="Barkat Market Heights — a premium boys' residence in Lahore. Where hostel living meets five-star comfort. Fully furnished rooms, AC & heating, dining, security and professional management.">
-
-<!-- Google Fonts -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Barkat Market Heights — Premium Residence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   BARKAT MARKET HEIGHTS — PREMIUM RESIDENCE
-   Black / Metallic Silver / Pure Gold Design System
-   ============================================================ */
-
-:root{
-  --black-deep:#050505;
-  --black-rich:#0A0A0A;
-  --charcoal:#121212;
-  --graphite:#1B1B1B;
-  --silver:#A8A8A8;
-  --silver-bright:#D6D6D6;
-  --chrome-white:#F2F2F2;
-  --gold:#D4AF37;
-  --gold-rich:#B8860B;
-  --gold-champagne:#E6C86E;
-
-  --font-head: 'Sora', sans-serif;
-  --font-body: 'Manrope', sans-serif;
-
-  --ease-lux: cubic-bezier(.22,1,.36,1);
-  --border-hair: 1px solid rgba(168,168,168,.18);
-}
-
-*,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-html{ scroll-behavior:smooth; }
-html,body{ overflow-x:hidden; width:100%; }
-
-body{
-  background:var(--black-deep);
-  color:var(--chrome-white);
-  font-family:var(--font-body);
-  font-weight:400;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  cursor:default;
-}
-
-img{ max-width:100%; display:block; }
-a{ color:inherit; text-decoration:none; }
-ul{ list-style:none; }
-button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
-input,textarea{ font-family:inherit; }
-
-::selection{ background:var(--gold); color:var(--black-deep); }
-
-/* Scrollbar */
-::-webkit-scrollbar{ width:8px; }
-::-webkit-scrollbar-track{ background:var(--black-rich); }
-::-webkit-scrollbar-thumb{ background:linear-gradient(var(--gold-rich),var(--gold)); border-radius:4px; }
-
-/* Focus visibility for accessibility */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
-  outline:2px solid var(--gold);
-  outline-offset:3px;
-}
-
-.container{
-  width:100%;
-  max-width:1320px;
-  margin:0 auto;
-  padding:0 clamp(20px,5vw,60px);
-}
-
-/* ---------- Metallic text effects ---------- */
-.chrome-text{
-  background:linear-gradient(110deg,#707070 0%,#F2F2F2 28%,#A0A0A0 50%,#FFFFFF 68%,#777777 100%);
-  background-size:250% 100%;
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  animation:chromeSweep 8s ease-in-out infinite;
-}
-@keyframes chromeSweep{
-  0%{ background-position:0% 50%; }
-  50%{ background-position:100% 50%; }
-  100%{ background-position:0% 50%; }
-}
-
-.gold-text{
-  background:linear-gradient(110deg,#8A6508 0%,#D4AF37 30%,#F5DE8A 50%,#D4AF37 70%,#9A720A 100%);
-  background-size:250% 100%;
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  animation:chromeSweep 9s ease-in-out infinite;
-}
-
-.eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  font-family:var(--font-body);
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:.32em;
-  text-transform:uppercase;
-  color:var(--gold-champagne);
-}
-.eyebrow::before{
-  content:'';
-  width:28px;
-  height:1px;
-  background:linear-gradient(90deg,transparent,var(--gold));
-}
-
-h1,h2,h3,h4{
-  font-family:var(--font-head);
-  font-weight:700;
-  letter-spacing:-.01em;
-  line-height:1.05;
-}
-
-.section-heading{
-  font-size:clamp(32px,5vw,64px);
-  text-transform:uppercase;
-  color:var(--chrome-white);
-}
-
-.section-pad{ padding:clamp(90px,12vw,160px) 0; }
-.section-label-block{ margin-bottom:clamp(36px,6vw,64px); }
-
-/* thin metallic divider */
-.hr-metal{
-  height:1px;
-  width:100%;
-  background:linear-gradient(90deg,transparent,var(--silver) 20%,var(--gold) 50%,var(--silver) 80%,transparent);
-  opacity:.5;
-}
-
-/* ---------- Buttons ---------- */
-.btn{
-  position:relative;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:17px 36px;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  border-radius:2px;
-  overflow:hidden;
-  isolation:isolate;
-  transition:transform .5s var(--ease-lux), box-shadow .5s var(--ease-lux);
-  white-space:nowrap;
-}
-.btn span{ position:relative; z-index:2; }
-.btn i{ position:relative; z-index:2; font-size:12px; }
-
-.btn-gold{
-  color:#0A0A0A;
-  background:linear-gradient(110deg,#8A6508 0%,#D4AF37 25%,#F5DE8A 45%,#D4AF37 65%,#9A720A 100%);
-  background-size:220% 100%;
-  box-shadow:0 8px 30px -8px rgba(212,175,55,.55);
-}
-.btn-gold:hover{ background-position:100% 0; transform:translateY(-3px); box-shadow:0 14px 40px -8px rgba(212,175,55,.75); }
-
-.btn-outline{
-  color:var(--chrome-white);
-  border:1px solid rgba(214,214,214,.4);
-  background:rgba(255,255,255,.02);
-  backdrop-filter:blur(6px);
-}
-.btn-outline:hover{
-  border-color:var(--gold);
-  color:var(--gold-champagne);
-  transform:translateY(-3px);
-  background:rgba(212,175,55,.06);
-}
-
-.btn-block{ width:100%; }
-.btn-sm{ padding:13px 24px; font-size:11.5px; }
-
-/* magnetic wrapper */
-.magnetic{ display:inline-block; }
-
-/* ---------- Preloader ---------- */
-#preloader{
-  position:fixed; inset:0; z-index:9999;
-  background:var(--black-deep);
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:22px;
-  transition:opacity 1s var(--ease-lux), visibility 1s var(--ease-lux);
-}
-#preloader.hidden{ opacity:0; visibility:hidden; pointer-events:none; }
-.preloader-mark{
-  font-family:var(--font-head);
-  font-size:clamp(28px,6vw,54px);
-  font-weight:800;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  text-align:center;
-}
-.preloader-sub{
-  font-size:11px;
-  letter-spacing:.4em;
-  text-transform:uppercase;
-  color:var(--silver);
-}
-.preloader-line{
-  width:min(280px,60vw);
-  height:1px;
-  background:rgba(168,168,168,.2);
-  position:relative;
-  overflow:hidden;
-  margin-top:10px;
-}
-.preloader-line::after{
-  content:'';
-  position:absolute; inset:0 100% 0 0;
-  background:linear-gradient(90deg,var(--gold-rich),var(--gold),var(--gold-champagne));
-  animation:loadBar 2.4s var(--ease-lux) forwards;
-}
-@keyframes loadBar{ to{ inset:0 0 0 0; } }
-.preloader-pct{ font-size:11px; color:var(--gold-champagne); letter-spacing:.2em; }
-
-/* ---------- Custom cursor ---------- */
-.cursor-dot,.cursor-ring{
-  position:fixed; top:0; left:0; pointer-events:none; z-index:9998;
-  transform:translate(-50%,-50%);
-  border-radius:50%;
-}
-.cursor-dot{ width:6px; height:6px; background:var(--gold); }
-.cursor-ring{ width:34px; height:34px; border:1px solid rgba(212,175,55,.55); transition:width .3s,height .3s,border-color .3s,background .3s; }
-.cursor-ring.grow{ width:64px; height:64px; background:rgba(212,175,55,.08); border-color:var(--gold); }
-@media (hover:none), (pointer:coarse){
-  .cursor-dot,.cursor-ring{ display:none; }
-}
-
-/* ---------- Scroll progress ---------- */
-#scroll-progress{
-  position:fixed; top:0; left:0; height:2px; width:0%;
-  background:linear-gradient(90deg,var(--silver),var(--gold),var(--gold-champagne));
-  z-index:9997;
-}
-
-/* ---------- Navbar ---------- */
-header{
-  position:fixed; top:0; left:0; width:100%; z-index:900;
-  padding:24px 0;
-  transition:padding .5s var(--ease-lux), background .5s var(--ease-lux), border-color .5s var(--ease-lux);
-  border-bottom:1px solid transparent;
-}
-header.scrolled{
-  padding:14px 0;
-  background:rgba(5,5,5,.78);
-  backdrop-filter:blur(16px) saturate(140%);
-  border-bottom:1px solid rgba(168,168,168,.15);
-}
-.nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:nowrap; }
-.logo{ display:flex; align-items:center; gap:10px; min-width:0; flex-shrink:0; }
-.logo-mark{
-  width:38px; height:38px; border-radius:50%;
-  border:1px solid rgba(212,175,55,.5);
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-head); font-weight:800; font-size:13px;
-  background:linear-gradient(160deg,rgba(212,175,55,.12),transparent);
-  color:var(--gold-champagne);
-  flex-shrink:0;
-}
-.logo-text{ display:flex; flex-direction:column; line-height:1.15; white-space:nowrap; min-width:0; }
-.logo-text .lt1{
-  font-family:var(--font-head); font-weight:700; font-size:clamp(11.5px,1vw,14px); letter-spacing:.04em; white-space:nowrap;
-}
-.logo-text .lt2{ font-size:8.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--silver); white-space:nowrap; }
-
-nav.main-nav{ display:flex; align-items:center; gap:0; flex-shrink:1; }
-nav.main-nav a{
-  position:relative;
-  padding:10px 11px;
-  font-size:11.5px;
-  font-weight:600;
-  letter-spacing:.03em;
-  text-transform:uppercase;
-  color:var(--silver-bright);
-  transition:color .3s;
-  white-space:nowrap;
-}
-nav.main-nav a::after{
-  content:'';
-  position:absolute; left:16px; right:16px; bottom:4px; height:1px;
-  background:var(--gold);
-  transform:scaleX(0); transform-origin:left;
-  transition:transform .4s var(--ease-lux);
-}
-nav.main-nav a:hover{ color:var(--chrome-white); }
-nav.main-nav a:hover::after, nav.main-nav a.active::after{ transform:scaleX(1); }
-nav.main-nav a.active{ color:var(--gold-champagne); }
-
-.nav-actions{ display:flex; align-items:center; gap:14px; flex-shrink:0; }
-.nav-cta{ display:inline-flex; padding:12px 20px !important; font-size:11px !important; }
-.hamburger{
-  display:none; flex-direction:column; gap:5px; width:26px; z-index:1200;
-  background:none; border:none;
-}
-.hamburger span{ display:block; height:1.5px; width:100%; background:var(--chrome-white); transition:transform .4s var(--ease-lux), opacity .3s; }
-.hamburger.open span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); }
-.hamburger.open span:nth-child(2){ opacity:0; }
-.hamburger.open span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); }
-
-/* ---------- Mobile Nav ---------- */
-.mobile-nav{
-  position:fixed; inset:0; z-index:1100;
-  background:rgba(5,5,5,.98);
-  backdrop-filter:blur(20px);
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:6px;
-  transform:translateY(-100%);
-  transition:transform .6s var(--ease-lux);
-}
-.mobile-nav.open{ transform:translateY(0); }
-.mobile-nav a{
-  font-family:var(--font-head); font-size:26px; font-weight:600; text-transform:uppercase;
-  padding:14px 0; color:var(--silver-bright); letter-spacing:.03em;
-}
-.mobile-nav a:hover{ color:var(--gold-champagne); }
-.mobile-nav .btn{ margin-top:24px; }
-
-/* ---------- Hero (compact split layout) ---------- */
-.hero{
-  position:relative; width:100%;
-  min-height:100svh;
-  display:flex; align-items:center;
-  overflow:hidden;
-  padding:clamp(110px,16vh,150px) 0 clamp(40px,6vh,60px);
-  background:
-    radial-gradient(ellipse 900px 500px at 85% 20%, rgba(212,175,55,.08), transparent 60%),
-    radial-gradient(ellipse 700px 500px at 5% 90%, rgba(168,168,168,.06), transparent 60%),
-    var(--black-deep);
-}
-.hero-bg-lines{
-  position:absolute; inset:0; pointer-events:none; opacity:.35; z-index:0;
-  background-image:linear-gradient(rgba(214,214,214,.06) 1px, transparent 1px);
-  background-size:100% 64px;
-  mask-image:linear-gradient(180deg, transparent, black 30%, black 70%, transparent);
-}
-
-.hero-grid{
-  position:relative; z-index:3;
-  display:grid; grid-template-columns:1.05fr .95fr;
-  gap:clamp(30px,5vw,64px);
-  align-items:center;
-  width:100%;
-}
-
-.hero-text{ display:flex; flex-direction:column; gap:18px; }
-.hero-eyebrow{
-  font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-champagne);
-  display:flex; align-items:center; gap:12px;
-}
-.hero-eyebrow::before{ content:''; width:36px; height:1px; background:var(--gold); flex-shrink:0; }
-
-.hero-title{
-  font-size:clamp(32px,4.6vw,62px);
-  text-transform:uppercase;
-  overflow:hidden;
-}
-.hero-title .line{ display:block; overflow:hidden; }
-.hero-title .line span{ display:inline-block; will-change:transform; }
-
-.hero-sub{
-  max-width:480px; font-size:clamp(14.5px,1.3vw,16.5px); color:var(--silver-bright); font-weight:400;
-}
-.hero-btns{ display:flex; flex-wrap:wrap; gap:14px; margin-top:6px; }
-
-.hero-mini-info{
-  display:flex; flex-wrap:wrap; gap:20px 28px; margin-top:22px; padding-top:22px;
-  border-top:1px solid rgba(168,168,168,.15);
-}
-.hero-mini-info .hmi-item{ display:flex; align-items:center; gap:10px; }
-.hero-mini-info .hmi-item i{ color:var(--gold); font-size:15px; }
-.hero-mini-info .hmi-item span{ font-size:12px; letter-spacing:.05em; color:var(--silver-bright); }
-
-/* image side */
-.hero-image-wrap{ position:relative; }
-.hero-image-frame{
-  position:relative; border-radius:6px; overflow:hidden;
-  border:1px solid rgba(214,214,214,.22);
-  box-shadow:0 40px 90px -28px rgba(0,0,0,.85), 0 0 0 1px rgba(212,175,55,.08);
-  transform-style:preserve-3d;
-  will-change:transform;
-}
-.hero-image-frame img{
-  width:100%; height:clamp(280px,38vw,480px); object-fit:cover; object-position:center 30%;
-  transition:transform 1.2s var(--ease-lux);
-}
-.hero-image-frame:hover img{ transform:scale(1.05); }
-.hero-image-frame-corner{
-  position:absolute; width:26px; height:26px; border:1px solid var(--gold-champagne); opacity:.9; pointer-events:none; z-index:3;
-}
-.hero-image-frame-corner.tl{ top:10px; left:10px; border-right:none; border-bottom:none; }
-.hero-image-frame-corner.br{ bottom:10px; right:10px; border-left:none; border-top:none; }
-.hero-image-sheen{
-  position:absolute; inset:0; pointer-events:none; opacity:0; z-index:2;
-  background:linear-gradient(120deg, transparent 40%, rgba(255,255,255,.22) 50%, transparent 60%);
-  background-size:220% 220%; background-position:120% 0;
-  transition:opacity .5s;
-}
-.hero-image-frame:hover .hero-image-sheen{ opacity:1; animation:sheen 1.4s var(--ease-lux); }
-.hero-image-badge{
-  position:absolute; left:-18px; bottom:-18px; z-index:4;
-  background:var(--charcoal); border:1px solid rgba(212,175,55,.4);
-  padding:14px 20px; border-radius:2px;
-  box-shadow:0 20px 50px -20px rgba(0,0,0,.7);
-}
-.hero-image-badge .num{ font-family:var(--font-head); font-size:22px; font-weight:800; }
-.hero-image-badge .lbl{ font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--silver); }
-.hero-image-tag{
-  position:absolute; top:-14px; right:16px; z-index:4;
-  font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-champagne);
-  background:var(--black-rich); border:1px solid rgba(212,175,55,.35); padding:8px 14px; border-radius:20px;
-}
-
-.scroll-cue{
-  position:absolute; bottom:20px; left:50%; transform:translateX(-50%); z-index:6;
-  display:flex; flex-direction:column; align-items:center; gap:8px;
-  color:var(--silver);
-  font-size:10px; letter-spacing:.3em; text-transform:uppercase;
-}
-.scroll-cue .mouse{
-  width:22px; height:36px; border:1px solid rgba(214,214,214,.5); border-radius:12px;
-  position:relative;
-}
-.scroll-cue .mouse::after{
-  content:''; position:absolute; top:6px; left:50%; width:3px; height:6px; border-radius:2px;
-  background:var(--gold); transform:translateX(-50%);
-  animation:mouseScroll 1.8s ease-in-out infinite;
-}
-@keyframes mouseScroll{ 0%{ opacity:1; top:6px; } 70%{ opacity:0; top:18px; } 100%{ opacity:0; top:6px; } }
-
-/* floating geometric elements */
-.floater{
-  position:absolute; pointer-events:none; opacity:.4; z-index:1;
-}
-.floater.ring{
-  width:110px; height:110px; border-radius:50%;
-  border:1px solid rgba(212,175,55,.35);
-}
-.floater.ring2{ width:60px; height:60px; border:1px solid rgba(214,214,214,.25); border-radius:50%; }
-.floater.line{ width:1px; height:120px; background:linear-gradient(rgba(214,214,214,.3),transparent); }
-.floater.frame{ width:70px; height:96px; border:1px solid rgba(212,175,55,.3); }
-
-@media (max-width:900px){
-  .hero-grid{ grid-template-columns:1fr; }
-  .hero-image-wrap{ order:-1; max-width:420px; margin:0 auto; }
-  .hero-image-frame img{ height:clamp(220px,60vw,320px); }
-  .hero-text{ text-align:left; }
-  .hero-image-badge{ left:-10px; bottom:-14px; padding:10px 16px; }
-  .hero{ padding-top:clamp(100px,20vh,130px); }
-}
-@media (max-width:480px){
-  .hero-btns{ flex-direction:column; align-items:stretch; }
-  .hero-btns .btn{ width:100%; }
-  .hero-mini-info{ gap:14px 20px; }
-}
-
-/* ================= ABOUT ================= */
-.about-grid{
-  display:grid; grid-template-columns:1fr 1fr; gap:clamp(30px,6vw,90px); align-items:center;
-}
-.about-copy .section-heading{ margin:18px 0 22px; }
-.about-copy p{ color:var(--silver-bright); font-size:16px; max-width:520px; margin-bottom:28px; }
-.about-lines{ display:flex; flex-wrap:wrap; gap:14px 22px; margin-top:8px; }
-.about-lines span{
-  font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--silver);
-  padding:8px 14px; border:1px solid rgba(168,168,168,.25); border-radius:2px;
-}
-.about-lines span i{ color:var(--gold); margin-right:6px; }
-
-.about-media{ position:relative; perspective:1200px; }
-.about-media-frame{
-  position:relative; border-radius:3px; overflow:hidden;
-  box-shadow:0 40px 90px -30px rgba(0,0,0,.8), 0 0 0 1px rgba(214,214,214,.15);
-  transform-style:preserve-3d;
-}
-.about-media-frame img{ width:100%; height:560px; object-fit:cover; transition:transform 1.2s var(--ease-lux); }
-.about-media-frame:hover img{ transform:scale(1.06); }
-.about-media-glow{
-  position:absolute; inset:-2px; pointer-events:none; border-radius:3px;
-  background:linear-gradient(140deg,rgba(212,175,55,.0) 40%, rgba(212,175,55,.35) 50%, rgba(212,175,55,0) 60%);
-  background-size:220% 220%; opacity:0; transition:opacity .5s;
-}
-.about-media-frame:hover .about-media-glow{ opacity:1; animation:sheen 1.6s var(--ease-lux); }
-@keyframes sheen{ 0%{ background-position:120% 0; } 100%{ background-position:-20% 100%; } }
-
-.about-tag{
-  position:absolute; bottom:-22px; left:-22px; z-index:3;
-  background:var(--charcoal); border:1px solid rgba(212,175,55,.4);
-  padding:18px 24px; border-radius:2px;
-  box-shadow:0 20px 50px -20px rgba(0,0,0,.7);
-}
-.about-tag .num{ font-family:var(--font-head); font-size:30px; font-weight:800; }
-.about-tag .lbl{ font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--silver); }
-
-/* stat counters row */
-.stats-row{
-  display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
-  margin-top:clamp(50px,7vw,80px); border-top:var(--border-hair); padding-top:clamp(32px,5vw,50px);
-}
-.stat-item{ text-align:left; }
-.stat-num{
-  font-family:var(--font-head); font-size:clamp(34px,4.4vw,56px); font-weight:800;
-  display:flex; align-items:baseline; gap:2px;
-}
-.stat-lbl{ font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--silver); margin-top:6px; }
-
-/* ================= BUILDING SHOWCASE ================= */
-.showcase{ position:relative; }
-.showcase-heading{ text-align:center; max-width:760px; margin:0 auto clamp(40px,6vw,70px); }
-.showcase-heading .section-heading{ margin-top:16px; }
-.showcase-tabs{
-  display:flex; justify-content:center; gap:4px; margin-bottom:36px;
-}
-.showcase-tab{
-  padding:13px 28px; font-size:12px; letter-spacing:.16em; text-transform:uppercase; font-weight:700;
-  color:var(--silver); border:1px solid rgba(168,168,168,.25); background:rgba(255,255,255,.02);
-  transition:all .4s var(--ease-lux);
-}
-.showcase-tab:first-child{ border-radius:2px 0 0 2px; }
-.showcase-tab:last-child{ border-radius:0 2px 2px 0; }
-.showcase-tab.active{
-  color:#0A0A0A; background:linear-gradient(110deg,#8A6508,#D4AF37 40%,#F5DE8A 60%,#D4AF37 80%,#9A720A);
-  border-color:transparent;
-}
-.showcase-stage{
-  position:relative; border-radius:4px; overflow:hidden;
-  border:1px solid rgba(214,214,214,.18);
-  box-shadow:0 60px 120px -40px rgba(0,0,0,.85);
-  perspective:1600px;
-}
-.showcase-stage-inner{ position:relative; height:clamp(340px,60vw,640px); }
-.showcase-slide{
-  position:absolute; inset:0; opacity:0; transform:scale(1.05) rotateY(4deg);
-  transition:opacity .9s var(--ease-lux), transform 1.1s var(--ease-lux);
-  pointer-events:none;
-}
-.showcase-slide.active{ opacity:1; transform:scale(1) rotateY(0); pointer-events:auto; }
-.showcase-slide img{ width:100%; height:100%; object-fit:cover; }
-.showcase-slide-overlay{
-  position:absolute; inset:0;
-  background:linear-gradient(0deg, rgba(5,5,5,.85) 0%, transparent 40%);
-}
-.showcase-caption{
-  position:absolute; left:clamp(20px,4vw,48px); bottom:clamp(20px,4vw,42px); z-index:3;
-}
-.showcase-caption .eyebrow{ margin-bottom:8px; }
-.showcase-caption h3{ font-size:clamp(24px,3.4vw,40px); text-transform:uppercase; }
-.showcase-grid-lines{
-  position:absolute; inset:0; z-index:2; pointer-events:none; opacity:.25;
-  background-image:
-    linear-gradient(rgba(214,214,214,.6) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(214,214,214,.6) 1px, transparent 1px);
-  background-size:8.333% 100%, 100% 33.33%;
-}
-
-/* ================= PREMIUM EXPERIENCE (big statements) ================= */
-.statement-block{ text-align:center; }
-.statement-line{
-  font-family:var(--font-head); font-weight:800; text-transform:uppercase;
-  font-size:clamp(30px,6.4vw,86px); line-height:1.05; color:var(--graphite);
-  -webkit-text-stroke:1px rgba(168,168,168,.5);
-  margin-bottom:6px;
-}
-.statement-line.filled{ -webkit-text-stroke:0; color:var(--chrome-white); }
-.statement-sub{ max-width:600px; margin:26px auto 0; color:var(--silver-bright); font-size:15.5px; }
-
-/* ================= FEATURE / FACILITY CARDS ================= */
-.grid-cards{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
-.feature-card{
-  position:relative; padding:34px 26px; border-radius:3px;
-  background:linear-gradient(160deg, rgba(255,255,255,.035), rgba(255,255,255,.01));
-  border:1px solid rgba(168,168,168,.16);
-  transition:transform .5s var(--ease-lux), border-color .5s, box-shadow .5s;
-  transform-style:preserve-3d;
-  will-change:transform;
-}
-.feature-card:hover{
-  border-color:rgba(212,175,55,.55);
-  box-shadow:0 30px 60px -25px rgba(212,175,55,.25);
-}
-.feature-icon{
-  width:52px; height:52px; border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
-  border:1px solid rgba(212,175,55,.4);
-  color:var(--gold-champagne); font-size:19px; margin-bottom:22px;
-  background:radial-gradient(circle at 30% 30%, rgba(212,175,55,.15), transparent 70%);
-  transition:transform .5s var(--ease-lux), background .5s;
-}
-.feature-card:hover .feature-icon{ transform:rotate(-8deg) scale(1.08); }
-.feature-card h4{ font-size:16.5px; text-transform:uppercase; letter-spacing:.02em; margin-bottom:10px; }
-.feature-card p{ font-size:13.5px; color:var(--silver); line-height:1.6; }
-
-/* ================= LIFESTYLE ================= */
-.lifestyle-grid{
-  display:grid; grid-template-columns:1.2fr .8fr; grid-template-rows:auto auto; gap:20px;
-}
-.lifestyle-panel{
-  position:relative; border-radius:3px; overflow:hidden; min-height:260px;
-  border:1px solid rgba(168,168,168,.16);
-}
-.lifestyle-panel img{ width:100%; height:100%; object-fit:cover; position:absolute; inset:0; transition:transform 1.4s var(--ease-lux); }
-.lifestyle-panel:hover img{ transform:scale(1.08); }
-.lifestyle-panel .lp-overlay{
-  position:absolute; inset:0; background:linear-gradient(0deg, rgba(5,5,5,.9), rgba(5,5,5,.15) 60%);
-}
-.lifestyle-panel .lp-text{ position:absolute; left:24px; bottom:22px; right:24px; z-index:2; }
-.lifestyle-panel .lp-text .eyebrow{ margin-bottom:6px; }
-.lifestyle-panel .lp-text h4{ font-size:clamp(18px,2vw,26px); text-transform:uppercase; }
-.lifestyle-panel.tall{ grid-row:span 2; }
-.lifestyle-panel.dark{
-  display:flex; flex-direction:column; justify-content:center; padding:34px;
-  background:linear-gradient(160deg, var(--charcoal), var(--black-rich));
-}
-.lifestyle-panel.dark h3{ font-size:clamp(24px,3vw,34px); text-transform:uppercase; margin-bottom:14px; }
-.lifestyle-panel.dark p{ color:var(--silver); font-size:14px; }
-
-/* ================= ROOMS ================= */
-.room-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
-.room-card{
-  position:relative; border-radius:4px; overflow:hidden;
-  background:linear-gradient(170deg, rgba(255,255,255,.045), rgba(255,255,255,.01));
-  border:1px solid rgba(168,168,168,.18);
-  padding:2px;
-  transform-style:preserve-3d;
-  transition:transform .5s var(--ease-lux), box-shadow .5s var(--ease-lux), border-color .5s;
-}
-.room-card:hover{ box-shadow:0 40px 70px -30px rgba(212,175,55,.3); border-color:rgba(212,175,55,.5); }
-.room-card-inner{ padding:32px 26px; display:flex; flex-direction:column; height:100%; }
-.room-badge{
-  align-self:flex-start;
-  font-size:10.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-champagne);
-  border:1px solid rgba(212,175,55,.4); padding:5px 12px; border-radius:20px; margin-bottom:22px;
-}
-.room-card h3{ font-size:19px; text-transform:uppercase; margin-bottom:6px; letter-spacing:.02em; }
-.room-price{ font-family:var(--font-head); font-weight:800; font-size:28px; margin:10px 0 4px; }
-.room-price small{ font-family:var(--font-body); font-size:12px; color:var(--silver); font-weight:400; letter-spacing:.02em; }
-.room-card p.desc{ font-size:13.5px; color:var(--silver); margin:14px 0 26px; flex-grow:1; }
-.room-card .btn{ margin-top:auto; }
-
-/* ================= WHY US COMPARISON ================= */
-.compare-wrap{
-  display:grid; grid-template-columns:1fr auto 1fr; gap:0; align-items:stretch;
-  border:1px solid rgba(168,168,168,.16); border-radius:4px; overflow:hidden;
-}
-.compare-col{ padding:clamp(30px,4vw,50px); }
-.compare-col.ordinary{ background:linear-gradient(160deg, rgba(255,255,255,.02), transparent); }
-.compare-col.premium{ background:linear-gradient(160deg, rgba(212,175,55,.07), rgba(212,175,55,.01)); }
-.compare-title{ font-size:13px; letter-spacing:.2em; text-transform:uppercase; margin-bottom:26px; }
-.compare-col.ordinary .compare-title{ color:var(--silver); }
-.compare-col.premium .compare-title{ color:var(--gold-champagne); }
-.compare-list li{ display:flex; align-items:flex-start; gap:12px; padding:13px 0; border-bottom:1px solid rgba(168,168,168,.1); font-size:14px; }
-.compare-col.ordinary .compare-list li{ color:var(--silver); }
-.compare-col.premium .compare-list li{ color:var(--chrome-white); }
-.compare-list li i{ margin-top:3px; flex-shrink:0; }
-.compare-col.ordinary .compare-list li i{ color:#6b6b6b; }
-.compare-col.premium .compare-list li i{ color:var(--gold); }
-.compare-divider{
-  width:1px; background:linear-gradient(var(--silver), var(--gold), var(--silver)); opacity:.4;
-  position:relative;
-}
-.compare-vs{
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:46px; height:46px; border-radius:50%; background:var(--black-rich); border:1px solid var(--gold);
-  display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-weight:800; font-size:12px; color:var(--gold-champagne);
-}
-
-/* ================= GALLERY ================= */
-.gallery-grid{
-  display:grid; grid-template-columns:repeat(6,1fr); grid-auto-rows:170px; gap:16px;
-}
-.gallery-item{
-  position:relative; overflow:hidden; border-radius:3px; cursor:pointer;
-  border:1px solid rgba(168,168,168,.15);
-}
-.gallery-item img{ width:100%; height:100%; object-fit:cover; transition:transform 1s var(--ease-lux); }
-.gallery-item:hover img{ transform:scale(1.12); }
-.gallery-item .gi-overlay{
-  position:absolute; inset:0; background:linear-gradient(0deg, rgba(5,5,5,.85), transparent 55%);
-  opacity:.6; transition:opacity .4s;
-  display:flex; align-items:flex-end; padding:16px;
-}
-.gallery-item:hover .gi-overlay{ opacity:1; }
-.gallery-item .gi-label{ font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-champagne); }
-.gallery-item .gi-expand{
-  position:absolute; top:14px; right:14px; width:34px; height:34px; border-radius:50%;
-  border:1px solid rgba(214,214,214,.4); display:flex; align-items:center; justify-content:center;
-  color:var(--chrome-white); opacity:0; transform:scale(.7); transition:all .35s var(--ease-lux);
-  background:rgba(5,5,5,.4);
-}
-.gallery-item:hover .gi-expand{ opacity:1; transform:scale(1); }
-.gallery-item.g-wide{ grid-column:span 3; }
-.gallery-item.g-tall{ grid-row:span 2; }
-.gallery-item.g-narrow{ grid-column:span 2; }
-
-/* lightbox */
-.lightbox{
-  position:fixed; inset:0; z-index:2000; background:rgba(5,5,5,.96); backdrop-filter:blur(10px);
-  display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden;
-  transition:opacity .4s, visibility .4s;
-}
-.lightbox.open{ opacity:1; visibility:visible; }
-.lightbox img{ max-width:88vw; max-height:82vh; object-fit:contain; border:1px solid rgba(212,175,55,.4); box-shadow:0 40px 100px rgba(0,0,0,.7); }
-.lightbox-close{
-  position:absolute; top:28px; right:32px; width:46px; height:46px; border-radius:50%;
-  border:1px solid rgba(214,214,214,.4); display:flex; align-items:center; justify-content:center; font-size:18px;
-  color:var(--chrome-white); transition:all .3s;
-}
-.lightbox-close:hover{ border-color:var(--gold); color:var(--gold-champagne); transform:rotate(90deg); }
-.lightbox-nav{
-  position:absolute; top:50%; transform:translateY(-50%); width:50px; height:50px; border-radius:50%;
-  border:1px solid rgba(214,214,214,.4); display:flex; align-items:center; justify-content:center; color:var(--chrome-white);
-  transition:all .3s;
-}
-.lightbox-nav:hover{ border-color:var(--gold); color:var(--gold-champagne); }
-.lightbox-prev{ left:28px; } .lightbox-next{ right:28px; }
-.lightbox-caption{ position:absolute; bottom:34px; left:50%; transform:translateX(-50%); font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--silver); }
-
-/* ================= PRICING TABLE ================= */
-.pricing-table{ width:100%; border-collapse:collapse; border:1px solid rgba(168,168,168,.18); border-radius:4px; overflow:hidden; }
-.pricing-table thead th{
-  text-align:left; padding:20px 26px; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--gold-champagne); background:rgba(212,175,55,.06); border-bottom:1px solid rgba(212,175,55,.25);
-}
-.pricing-table tbody td{
-  padding:22px 26px; font-size:15px; border-bottom:1px solid rgba(168,168,168,.1); color:var(--silver-bright);
-}
-.pricing-table tbody tr:last-child td{ border-bottom:none; }
-.pricing-table tbody tr{ transition:background .3s; }
-.pricing-table tbody tr:hover{ background:rgba(255,255,255,.02); }
-.pricing-table td.price-cell{ font-family:var(--font-head); font-weight:700; color:var(--chrome-white); font-size:17px; }
-.pricing-note{ font-size:12.5px; color:var(--silver); margin-top:18px; font-style:italic; }
-.pricing-cta-row{ display:flex; justify-content:center; margin-top:36px; }
-
-/* ================= LOCATION ================= */
-.location-wrap{ display:grid; grid-template-columns:.9fr 1.1fr; gap:40px; align-items:stretch; }
-.location-info{ display:flex; flex-direction:column; justify-content:center; gap:22px; }
-.location-info .section-heading{ margin:14px 0 8px; }
-.location-address{
-  border:1px solid rgba(168,168,168,.2); border-radius:3px; padding:22px 24px;
-  background:rgba(255,255,255,.02); display:flex; gap:14px; align-items:flex-start;
-}
-.location-address i{ color:var(--gold); font-size:18px; margin-top:2px; }
-.location-address .addr-title{ font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--silver); margin-bottom:6px; }
-.location-address .addr-text{ font-size:15px; color:var(--chrome-white); line-height:1.6; }
-.location-btns{ display:flex; flex-wrap:wrap; gap:14px; }
-.map-frame{
-  position:relative; border-radius:4px; overflow:hidden; border:1px solid rgba(168,168,168,.2);
-  min-height:420px; box-shadow:0 40px 90px -30px rgba(0,0,0,.7);
-}
-.map-frame iframe{ width:100%; height:100%; min-height:420px; filter:grayscale(.25) contrast(1.05) brightness(.95); }
-
-/* ================= REGISTRATION CTA ================= */
-.registration-box{
-  position:relative; text-align:center; padding:clamp(50px,7vw,90px) clamp(24px,5vw,60px);
-  border-radius:6px; overflow:hidden;
-  border:1px solid rgba(212,175,55,.3);
-  background:linear-gradient(160deg, rgba(212,175,55,.06), rgba(255,255,255,.01) 60%);
-}
-.registration-box::before{
-  content:''; position:absolute; inset:0; opacity:.5; pointer-events:none;
-  background:radial-gradient(circle at 20% 20%, rgba(212,175,55,.12), transparent 45%),
-             radial-gradient(circle at 80% 80%, rgba(214,214,214,.08), transparent 45%);
-}
-.registration-box h2{ position:relative; z-index:2; }
-.registration-box p{ position:relative; z-index:2; max-width:600px; margin:20px auto 34px; color:var(--silver-bright); font-size:16px; }
-.registration-box .fine{ position:relative; z-index:2; font-size:12px; color:var(--silver); margin-top:22px; max-width:520px; margin-left:auto; margin-right:auto; }
-
-/* ================= CONTACT ================= */
-.contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-.contact-card{
-  padding:36px 30px; border-radius:4px; text-align:center;
-  border:1px solid rgba(168,168,168,.18);
-  background:linear-gradient(165deg, rgba(255,255,255,.035), rgba(255,255,255,.008));
-  transition:transform .5s var(--ease-lux), border-color .4s;
-}
-.contact-card:hover{ transform:translateY(-8px); border-color:rgba(212,175,55,.5); }
-.contact-icon{
-  width:60px; height:60px; border-radius:50%; margin:0 auto 20px;
-  display:flex; align-items:center; justify-content:center; font-size:22px;
-  border:1px solid rgba(212,175,55,.4); color:var(--gold-champagne);
-  background:radial-gradient(circle at 30% 30%, rgba(212,175,55,.15), transparent 70%);
-}
-.contact-card h4{ font-size:14px; letter-spacing:.1em; text-transform:uppercase; color:var(--silver); margin-bottom:10px; }
-.contact-card .contact-value{ font-family:var(--font-head); font-size:22px; font-weight:700; margin-bottom:20px; }
-
-/* ================= FAQ ================= */
-.faq-list{ max-width:820px; margin:0 auto; }
-.faq-item{ border-bottom:1px solid rgba(168,168,168,.16); }
-.faq-q{
-  width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px;
-  padding:26px 4px; text-align:left; font-family:var(--font-head); font-size:clamp(15px,1.8vw,19px); font-weight:600;
-  color:var(--chrome-white);
-}
-.faq-q i{ color:var(--gold); transition:transform .4s var(--ease-lux); flex-shrink:0; }
-.faq-item.open .faq-q i{ transform:rotate(45deg); }
-.faq-a{ max-height:0; overflow:hidden; transition:max-height .5s var(--ease-lux); }
-.faq-a-inner{ padding:0 4px 26px; color:var(--silver-bright); font-size:14.5px; max-width:700px; }
-
-/* ================= FINAL CTA ================= */
-.final-cta{
-  position:relative; min-height:82vh; display:flex; align-items:center; justify-content:center; text-align:center;
-  overflow:hidden;
-}
-.final-cta-media{ position:absolute; inset:0; }
-.final-cta-media img{ width:100%; height:100%; object-fit:cover; }
-.final-cta-overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(5,5,5,.75), rgba(5,5,5,.55) 40%, rgba(5,5,5,.92)); }
-.final-cta-content{ position:relative; z-index:3; max-width:760px; padding:0 24px; }
-.final-cta h2{ font-size:clamp(38px,7vw,90px); text-transform:uppercase; }
-.final-cta p{ color:var(--silver-bright); font-size:16px; margin:22px 0 36px; }
-.final-cta .hero-frame{ inset:16px; }
-
-/* ================= FOOTER ================= */
-footer{ background:var(--black-rich); padding-top:clamp(60px,8vw,90px); position:relative; }
-.footer-top{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1.2fr; gap:40px; padding-bottom:60px; }
-.footer-brand .logo{ margin-bottom:18px; }
-.footer-brand p{ color:var(--silver); font-size:13.5px; max-width:280px; line-height:1.7; }
-.footer-tagline{ margin-top:16px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-champagne); }
-.footer-col h5{ font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--silver); margin-bottom:20px; }
-.footer-col ul li{ margin-bottom:12px; }
-.footer-col ul li a{ font-size:14px; color:var(--silver-bright); transition:color .3s, padding-left .3s; }
-.footer-col ul li a:hover{ color:var(--gold-champagne); padding-left:4px; }
-.footer-social{ display:flex; gap:12px; margin-top:18px; }
-.footer-social a{
-  width:36px; height:36px; border-radius:50%; border:1px solid rgba(168,168,168,.3);
-  display:flex; align-items:center; justify-content:center; font-size:14px; transition:all .3s;
-}
-.footer-social a:hover{ border-color:var(--gold); color:var(--gold-champagne); transform:translateY(-3px); }
-.footer-bottom{
-  border-top:1px solid rgba(168,168,168,.12); padding:26px 0;
-  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
-}
-.footer-bottom p{ font-size:12.5px; color:var(--silver); }
-.footer-line{ height:2px; width:100%; background:linear-gradient(90deg, transparent, var(--silver) 20%, var(--gold) 50%, var(--silver) 80%, transparent); background-size:200% 100%; animation:chromeSweep 6s ease-in-out infinite; }
-
-/* ================= FLOATING WHATSAPP ================= */
-.float-whatsapp{
-  position:fixed; bottom:26px; right:26px; z-index:850;
-  width:60px; height:60px; border-radius:50%;
-  background:linear-gradient(160deg,#1c1c1c,#0a0a0a);
-  border:1px solid rgba(212,175,55,.45);
-  display:flex; align-items:center; justify-content:center; font-size:26px; color:#E6C86E;
-  box-shadow:0 14px 40px -12px rgba(0,0,0,.7);
-  animation:floatPulse 3s ease-in-out infinite;
-}
-.float-whatsapp:hover{ transform:scale(1.08); }
-@keyframes floatPulse{
-  0%,100%{ box-shadow:0 14px 40px -12px rgba(0,0,0,.7), 0 0 0 0 rgba(212,175,55,.4); }
-  50%{ box-shadow:0 14px 40px -12px rgba(0,0,0,.7), 0 0 0 10px rgba(212,175,55,0); }
-}
-
-/* ================= REVEAL UTILITIES ================= */
-.reveal{ opacity:0; transform:translateY(50px); }
-.reveal.up-visible{ opacity:1; transform:translateY(0); }
-
-/* ================= RESPONSIVE ================= */
-@media (max-width:1080px){
-  .grid-cards{ grid-template-columns:repeat(2,1fr); }
-  .room-grid{ grid-template-columns:repeat(2,1fr); }
-  .about-grid{ grid-template-columns:1fr; }
-  .about-media{ order:-1; }
-  .lifestyle-grid{ grid-template-columns:1fr 1fr; }
-  .stats-row{ grid-template-columns:repeat(2,1fr); row-gap:34px; }
-  .gallery-grid{ grid-template-columns:repeat(4,1fr); grid-auto-rows:150px; }
-  .gallery-item.g-wide{ grid-column:span 2; }
-  .location-wrap{ grid-template-columns:1fr; }
-}
-
-@media (max-width:1180px){
-  nav.main-nav{ display:none; }
-  .hamburger{ display:flex; }
-  .nav-cta.desktop-only{ display:none; }
-}
-@media (max-width:860px){
-  .compare-wrap{ grid-template-columns:1fr; }
-  .compare-divider{ display:none; }
-  .footer-top{ grid-template-columns:1fr 1fr; }
-}
-
-@media (max-width:640px){
-  .grid-cards{ grid-template-columns:1fr; }
-  .room-grid{ grid-template-columns:1fr; }
-  .lifestyle-grid{ grid-template-columns:1fr; }
-  .lifestyle-panel.tall{ grid-row:auto; min-height:220px; }
-  .stats-row{ grid-template-columns:1fr 1fr; }
-  .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:130px; }
-  .gallery-item.g-wide{ grid-column:span 2; }
-  .gallery-item.g-tall{ grid-row:span 1; }
-  .contact-grid{ grid-template-columns:1fr; }
-  .footer-top{ grid-template-columns:1fr; gap:36px; }
-  .footer-bottom{ flex-direction:column; align-items:flex-start; }
-  .pricing-table{ display:block; overflow-x:auto; white-space:nowrap; }
-  .about-tag{ left:12px; bottom:-18px; padding:12px 16px; }
-  .showcase-tabs{ flex-wrap:wrap; }
-}
-
-@media (prefers-reduced-motion: reduce){
-  *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
-}
+  :root{
+    --cream:#F3EADA;
+    --cream-deep:#E9DCC3;
+    --coffee:#3B2A1E;
+    --coffee-deep:#241811;
+    --espresso:#5C4632;
+    --gold:#B8863A;
+    --gold-bright:#D9B15C;
+    --gold-pale:#EFD8A0;
+    --line: rgba(59,42,30,0.18);
+    --header-h: 132px;
+    --footer-h: 58px;
+  }
+  @media (min-width:760px){
+    :root{ --header-h: 118px; --footer-h: 52px; }
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0;padding:0;height:100%;
+    background:var(--cream);
+    color:var(--coffee);
+    font-family:'Jost',sans-serif;
+  }
+  body{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(217,177,92,0.10), transparent 45%),
+      radial-gradient(circle at 85% 90%, rgba(217,177,92,0.10), transparent 45%),
+      var(--cream);
+  }
+  h1,h2,h3,h4{ font-family:'Cormorant Garamond', serif; font-weight:600; margin:0; color:var(--coffee-deep); }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  ::selection{ background:var(--gold-pale); }
+
+  /* ---------- HEADER ---------- */
+  .site-header{
+    flex:0 0 auto;
+    background:linear-gradient(180deg,var(--coffee-deep),var(--coffee) 90%);
+    border-bottom:2px solid var(--gold);
+    z-index:20;
+  }
+  .header-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:14px 26px 10px;
+  }
+  .brand{ display:flex; align-items:center; gap:14px; min-width:0; }
+  .brand .logo-mark{
+    width:56px;height:56px;border-radius:50%;
+    border:1.5px solid var(--gold);
+    background:var(--cream);
+    object-fit:cover;
+    flex:0 0 auto;
+  }
+  .brand-text h1{
+    color:var(--gold-pale);
+    font-size:1.55rem;
+    letter-spacing:.02em;
+    line-height:1.05;
+    white-space:nowrap;
+  }
+  .brand-text p{
+    margin:2px 0 0;
+    font-size:.72rem;
+    letter-spacing:.28em;
+    color:var(--gold);
+    text-transform:uppercase;
+    font-weight:500;
+  }
+  .btn-register{
+    flex:0 0 auto;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold));
+    color:var(--coffee-deep);
+    font-weight:600;
+    font-size:.85rem;
+    letter-spacing:.03em;
+    padding:11px 22px;
+    border-radius:2px;
+    box-shadow:0 4px 14px rgba(184,134,58,0.35);
+    white-space:nowrap;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-register:hover{ transform:translateY(-1px); box-shadow:0 6px 18px rgba(184,134,58,0.5); }
+
+  .site-nav{
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    padding:0 18px 12px;
+    flex-wrap:wrap;
+  }
+  .site-nav a{
+    font-size:.82rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--cream-deep);
+    padding:7px 16px;
+    border:1px solid transparent;
+    border-radius:2px;
+    transition:all .15s ease;
+  }
+  .site-nav a:hover{ color:var(--gold-bright); }
+  .site-nav a.active{
+    color:var(--coffee-deep);
+    background:var(--gold-pale);
+    border-color:var(--gold);
+  }
+
+  /* ---------- MAIN / PAGES ---------- */
+  main{
+    flex:1 1 auto;
+    position:relative;
+    overflow:hidden;
+  }
+  .page{
+    display:none;
+    position:absolute;
+    inset:0;
+    overflow-y:auto;
+    padding:clamp(20px,3.5vh,48px) clamp(20px,5vw,64px);
+  }
+  .page.active{ display:block; }
+  .page-inner{
+    max-width:1280px;
+    margin:0 auto;
+    height:100%;
+  }
+  .eyebrow-gold{
+    display:inline-block;
+    font-size:.72rem;
+    letter-spacing:.3em;
+    color:var(--gold);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+
+  /* ---------- HOME ---------- */
+  #home .page-inner{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:clamp(24px,4vw,60px);
+    align-items:center;
+    height:100%;
+  }
+  .home-copy h2{
+    font-size:clamp(1.7rem,3vw,2.5rem);
+    line-height:1.28;
+    font-weight:500;
+    color:var(--espresso);
+  }
+  .home-copy h2 .accent{
+    display:block;
+    margin-top:10px;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:1.15em;
+    color:var(--gold);
+    letter-spacing:.02em;
+  }
+  .home-cta{
+    margin-top:22px;
+    display:inline-block;
+    background:linear-gradient(135deg,var(--gold-bright),var(--gold));
+    color:var(--coffee-deep);
+    font-weight:600;
+    padding:13px 30px;
+    border-radius:2px;
+    letter-spacing:.03em;
+    box-shadow:0 6px 18px rgba(184,134,58,0.3);
+  }
+  .home-facts{
+    margin-top:26px;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+    font-size:.94rem;
+    color:var(--espresso);
+    border-top:1px solid var(--line);
+    padding-top:16px;
+  }
+  .home-facts span{ color:var(--gold); margin-right:8px; }
+  .home-extra{
+    margin-top:22px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .home-extra .line{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    background:var(--cream-deep);
+    border:1px solid var(--line);
+    border-left:3px solid var(--gold);
+    padding:10px 16px;
+    font-size:.88rem;
+    border-radius:2px;
+  }
+  .btn-mini{
+    flex:0 0 auto;
+    background:var(--coffee-deep);
+    color:var(--gold-pale);
+    font-size:.75rem;
+    letter-spacing:.06em;
+    padding:8px 14px;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+  .home-media{
+    position:relative;
+    height:100%;
+    max-height:62vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .home-media .frame{
+    width:100%;
+    height:100%;
+    border:1.5px solid var(--gold);
+    border-radius:3px;
+    overflow:hidden;
+    box-shadow:0 18px 40px rgba(59,42,30,0.22);
+  }
+  .home-media img{ width:100%; height:100%; object-fit:cover; }
+  .home-media .caption{
+    margin-top:12px;
+    font-size:.82rem;
+    letter-spacing:.05em;
+    color:var(--espresso);
+    text-align:center;
+  }
+  .home-media .caption b{ color:var(--gold); font-weight:600; }
+
+  /* ---------- LOCATION ---------- */
+  #location .page-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(24px,4vw,60px);
+    align-items:center;
+    height:100%;
+  }
+  .loc-copy h2{ font-size:clamp(1.7rem,3.2vw,2.6rem); font-weight:500; margin-bottom:14px; }
+  .loc-copy p{ font-size:1.02rem; line-height:1.7; color:var(--espresso); max-width:46ch; }
+  .btn-map{
+    display:inline-block;
+    margin-top:22px;
+    background:transparent;
+    border:1.5px solid var(--gold);
+    color:var(--coffee-deep);
+    font-weight:600;
+    letter-spacing:.08em;
+    font-size:.85rem;
+    padding:12px 26px;
+    border-radius:2px;
+    transition:background .15s ease, color .15s ease;
+  }
+  .btn-map:hover{ background:var(--gold); color:var(--coffee-deep); }
+  .loc-media{ height:100%; max-height:62vh; }
+  .loc-media .frame{
+    width:100%; height:100%;
+    border:1.5px solid var(--gold);
+    border-radius:3px;
+    overflow:hidden;
+    box-shadow:0 18px 40px rgba(59,42,30,0.22);
+  }
+  .loc-media img{ width:100%; height:100%; object-fit:cover; }
+
+  /* ---------- PRICING ---------- */
+  #pricing .page-inner{ height:100%; display:flex; flex-direction:column; justify-content:center; }
+  .section-head{ text-align:center; margin-bottom:clamp(16px,3vh,34px); }
+  .section-head h2{ font-size:clamp(1.7rem,3vw,2.4rem); font-weight:500; }
+  .price-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+  }
+  .price-card{
+    background:var(--cream-deep);
+    border:1px solid var(--line);
+    border-top:3px solid var(--gold);
+    border-radius:3px;
+    padding:20px 16px;
+    text-align:center;
+  }
+  .price-card .tag{
+    display:inline-block;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    color:var(--gold);
+    text-transform:uppercase;
+    margin-bottom:4px;
+  }
+  .price-card h3{ font-size:1.05rem; font-weight:600; color:var(--espresso); margin-bottom:14px; }
+  .price-card .amount{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.7rem,3vw,2.3rem);
+    font-weight:700;
+    color:var(--coffee-deep);
+    line-height:1;
+  }
+  .price-card .per{ font-size:.76rem; color:var(--espresso); margin-top:6px; letter-spacing:.03em; }
+  .price-notes{
+    margin-top:22px;
+    display:flex;
+    gap:14px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .price-notes .note{
+    font-size:.8rem;
+    color:var(--espresso);
+    background:var(--cream-deep);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:9px 16px;
+    max-width:340px;
+  }
+  .price-notes .note b{ color:var(--gold); }
+
+  /* ---------- GALLERY ---------- */
+  #gallery .page-inner{ height:100%; display:flex; flex-direction:column; justify-content:center; }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+    gap:12px;
+    height:calc(100% - 70px);
+  }
+  .gallery-grid .g-item{
+    border:1px solid var(--gold);
+    border-radius:3px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(59,42,30,0.16);
+  }
+  .gallery-grid img{ width:100%; height:100%; object-fit:cover; }
+
+  /* ---------- FACILITIES ---------- */
+  #facilities .page-inner{ height:100%; display:flex; flex-direction:column; justify-content:center; }
+  .fac-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+  }
+  .fac-item{
+    background:var(--cream-deep);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:16px 10px;
+    text-align:center;
+  }
+  .fac-item .dot{
+    width:34px;height:34px;
+    margin:0 auto 10px;
+    border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);
+    font-family:'Cormorant Garamond',serif;
+    font-weight:700;
+  }
+  .fac-item p{ font-size:.8rem; color:var(--espresso); line-height:1.3; }
+
+  /* ---------- CONTACT ---------- */
+  #contact .page-inner{
+    height:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:clamp(24px,4vw,60px);
+    align-items:center;
+  }
+  .contact-block h2{ font-size:clamp(1.7rem,3.2vw,2.6rem); font-weight:500; margin-bottom:18px; }
+  .contact-item{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:16px;
+    font-size:.98rem;
+    color:var(--espresso);
+  }
+  .contact-item span.ic{ color:var(--gold); font-weight:700; }
+  .contact-item a{ color:var(--coffee-deep); font-weight:600; }
+  .contact-card{
+    background:var(--cream-deep);
+    border:1px solid var(--line);
+    border-top:3px solid var(--gold);
+    border-radius:3px;
+    padding:26px;
+  }
+  .contact-card h3{ font-size:1.2rem; margin-bottom:12px; }
+  .contact-card p{ font-size:.9rem; color:var(--espresso); line-height:1.6; margin-bottom:18px; }
+  .contact-card .btn-register{ width:100%; text-align:center; display:block; }
+  .contact-card .btn-map{ width:100%; text-align:center; display:block; margin-top:12px; }
+
+  /* ---------- FOOTER ---------- */
+  .site-footer{
+    flex:0 0 auto;
+    background:var(--coffee-deep);
+    border-top:2px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:4px;
+    flex-wrap:wrap;
+    padding:8px 14px;
+  }
+  .site-footer a{
+    font-size:.72rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--cream-deep);
+    padding:6px 12px;
+    border-radius:2px;
+  }
+  .site-footer a.active{ color:var(--gold-bright); }
+  .site-footer a:hover{ color:var(--gold-bright); }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    #home .page-inner, #location .page-inner, #contact .page-inner{
+      grid-template-columns:1fr;
+      overflow-y:auto;
+      gap:18px;
+    }
+    .home-media, .loc-media{ max-height:32vh; }
+    .price-grid{ grid-template-columns:repeat(2,1fr); }
+    .fac-grid{ grid-template-columns:repeat(3,1fr); }
+    .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-template-rows:repeat(3,1fr); height:calc(100% - 60px); }
+  }
+  @media (max-width:600px){
+    .header-top{ padding:12px 14px 8px; }
+    .brand-text h1{ font-size:1.15rem; white-space:normal; }
+    .brand .logo-mark{ width:42px;height:42px; }
+    .btn-register{ padding:9px 14px; font-size:.72rem; }
+    .site-nav{ gap:4px; padding:0 8px 10px; justify-content:flex-start; overflow-x:auto; flex-wrap:nowrap; }
+    .site-nav a{ padding:6px 10px; font-size:.7rem; flex:0 0 auto; }
+    .page{ padding:16px 16px 20px; }
+    .fac-grid{ grid-template-columns:repeat(2,1fr); }
+    .price-grid{ grid-template-columns:1fr 1fr; }
+    .site-footer{ gap:2px; }
+    .site-footer a{ padding:4px 8px; font-size:.62rem; }
+  }
 </style>
 </head>
 <body>
 
-<!-- ============ PRELOADER ============ -->
-<div id="preloader" aria-hidden="true">
-  <div class="preloader-mark chrome-text">BARKAT MARKET HEIGHTS</div>
-  <div class="preloader-sub">PREMIUM BOYS&rsquo; RESIDENCE</div>
-  <div class="preloader-line"></div>
-  <div class="preloader-pct" id="preloader-pct">0%</div>
-</div>
-
-<!-- ============ CURSOR ============ -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- ============ SCROLL PROGRESS ============ -->
-<div id="scroll-progress"></div>
-
-<!-- ============ HEADER / NAV ============ -->
-<header id="siteHeader">
-  <div class="container nav-inner">
-    <a href="#home" class="logo" aria-label="Barkat Market Heights — Home">
-      <span class="logo-mark">BH</span>
-      <span class="logo-text">
-        <span class="lt1 chrome-text">BARKAT MARKET HEIGHTS</span>
-        <span class="lt2">Premium Boys&rsquo; Residence</span>
-      </span>
-    </a>
-
-    <nav class="main-nav" aria-label="Primary">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#residence">Residence</a>
-      <a href="#rooms">Rooms</a>
-      <a href="#facilities">Facilities</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#location">Location</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="nav-actions">
-      <a class="btn btn-gold btn-sm nav-cta desktop-only magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer">
-        <span>Register Now</span><i class="fa-solid fa-arrow-right"></i>
-      </a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-        <span></span><span></span><span></span>
-      </button>
+<header class="site-header">
+  <div class="header-top">
+    <div class="brand">
+      <img src="logo.png" alt="K&J logo" class="logo-mark">
+      <div class="brand-text">
+        <h1>Barkat Market Heights</h1>
+        <p>Premium Residence</p>
+      </div>
     </div>
+    <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSdxx_TUIaHdz9Gw23WXYt-Ez6sXSn2c4PHyB3_QPnFo-c7Blg/viewform?usp=send_form" target="_blank" rel="noopener">Register Now</a>
   </div>
+  <nav class="site-nav" id="navTop">
+    <a data-target="home" class="active">Home</a>
+    <a data-target="location">Location</a>
+    <a data-target="pricing">Pricing</a>
+    <a data-target="gallery">Gallery</a>
+    <a data-target="facilities">Facilities</a>
+    <a data-target="contact">Contact</a>
+  </nav>
 </header>
 
-<!-- ============ MOBILE NAV ============ -->
-<div class="mobile-nav" id="mobileNav">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#residence">Residence</a>
-  <a href="#rooms">Rooms</a>
-  <a href="#facilities">Facilities</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#location">Location</a>
-  <a href="#contact">Contact</a>
-  <a class="btn btn-gold" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer"><span>Register Now</span></a>
-</div>
+<main>
 
-<main id="home">
+  <!-- HOME -->
+  <section id="home" class="page active">
+    <div class="page-inner">
+      <div class="home-copy">
+        <span class="eyebrow-gold">Live Higher</span>
+        <h2>A premium residence for professionals, students and overseas Pakistanis — designed for comfort, convenience, security, and a better way of living.
+          <span class="accent">Where accommodation meets home feeling.</span>
+        </h2>
+        <a class="home-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdxx_TUIaHdz9Gw23WXYt-Ez6sXSn2c4PHyB3_QPnFo-c7Blg/viewform?usp=send_form" target="_blank" rel="noopener">Register Now</a>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" aria-label="Barkat Market Heights hero">
-    <div class="hero-bg-lines"></div>
-
-    <div class="floater ring" style="top:14%; left:4%;"></div>
-    <div class="floater ring2" style="top:70%; left:10%;"></div>
-    <div class="floater line" style="top:8%; left:46%;"></div>
-    <div class="floater frame" style="bottom:8%; right:44%;"></div>
-
-    <div class="container">
-      <div class="hero-grid">
-
-        <div class="hero-text">
-          <div class="hero-eyebrow">Premium Boys&rsquo; Residence &mdash; Lahore</div>
-          <h1 class="hero-title">
-            <span class="line"><span>LIVE HIGHER.</span></span>
-            <span class="line"><span class="gold-text">LIVE BETTER.</span></span>
-          </h1>
-          <p class="hero-sub">A premium boys&rsquo; residence designed for comfort, convenience, security, and a better way of living &mdash; where hostel living meets five-star comfort.</p>
-          <div class="hero-btns">
-            <a class="btn btn-gold magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer">
-              <span>Register for Residence</span><i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a class="btn btn-outline magnetic" href="#residence">
-              <span>Explore the Property</span><i class="fa-solid fa-arrow-down"></i>
-            </a>
-          </div>
-          <div class="hero-mini-info">
-            <div class="hmi-item"><i class="fa-solid fa-location-dot"></i><span>New Garden Town, Lahore</span></div>
-            <div class="hmi-item"><i class="fa-solid fa-shield-halved"></i><span>24/7 Secure &amp; Managed</span></div>
-            <div class="hmi-item"><i class="fa-solid fa-phone"></i><span>0323 4540454</span></div>
-          </div>
+        <div class="home-facts">
+          <div><span>&#9679;</span>Barkat Market Heights, New Garden Town, Lahore</div>
+          <div><span>&#9679;</span>24/7 Secure &amp; Managed</div>
+          <div><span>&#9679;</span>0329 9922200</div>
         </div>
 
-        <div class="hero-image-wrap" id="heroMedia">
-          <span class="hero-image-tag">Front Elevation</span>
-          <div class="hero-image-frame">
-            <img src="img1.png" alt="Front elevation of Barkat Market Heights premium boys' residence building in Lahore">
-            <div class="hero-image-sheen"></div>
-            <div class="hero-image-frame-corner tl"></div>
-            <div class="hero-image-frame-corner br"></div>
-          </div>
-          <div class="hero-image-badge">
-            <div class="num gold-text">5★</div>
-            <div class="lbl">Inspired Living</div>
+        <div class="home-extra">
+          <div class="line">Residence available for corporate firms and sector employees.</div>
+          <div class="line">
+            <span>Co-working space available — book your slot.</span>
+            <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book Now</a>
           </div>
         </div>
-
       </div>
-    </div>
 
-    <div class="scroll-cue"><span class="mouse"></span>Scroll</div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="section-pad" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-copy reveal">
-          <span class="eyebrow">Welcome Home</span>
-          <h2 class="section-heading">MORE THAN A HOSTEL.<br>A <span class="gold-text">BETTER WAY</span> TO LIVE.</h2>
-          <p>Barkat Market Heights redefines modern hostel living. Designed for students and working professionals, our residence combines premium interiors, thoughtfully designed spaces, modern facilities, comfort, security, and a strong sense of community &mdash; all under one roof.</p>
-          <div class="about-lines">
-            <span><i class="fa-solid fa-check"></i>Premium Living in the Heart of Lahore</span>
-            <span><i class="fa-solid fa-check"></i>Luxury. Comfort. Community.</span>
-            <span><i class="fa-solid fa-check"></i>Your Home Above the Ordinary</span>
-          </div>
-
-          <div class="stats-row">
-            <div class="stat-item"><div class="stat-num gold-text" data-count="24">0</div><div class="stat-lbl">Hour Security</div></div>
-            <div class="stat-item"><div class="stat-num gold-text" data-count="4">0</div><div class="stat-lbl">Room Options</div></div>
-            <div class="stat-item"><div class="stat-num gold-text" data-count="100">0</div><div class="stat-lbl">% Furnished</div></div>
-            <div class="stat-item"><div class="stat-num gold-text" data-count="365">0</div><div class="stat-lbl">Days Managed</div></div>
-          </div>
-        </div>
-
-        <div class="about-media reveal">
-          <div class="about-media-frame">
-            <img src="img2.png" alt="Side elevation of Barkat Market Heights residence building">
-            <div class="about-media-glow"></div>
-          </div>
-          <div class="about-tag">
-            <div class="num gold-text">5★</div>
-            <div class="lbl">Inspired Living</div>
-          </div>
-        </div>
+      <div class="home-media">
+        <div class="frame"><img src="pic.png" alt="Barkat Market Heights building"></div>
+        <p class="caption">Facilities: <b>WiFi · AC · Mess · Gym</b></p>
       </div>
     </div>
   </section>
 
-  <div class="container"><div class="hr-metal"></div></div>
-
-  <!-- ============ BUILDING SHOWCASE ============ -->
-  <section class="section-pad" id="residence">
-    <div class="container">
-      <div class="showcase">
-        <div class="showcase-heading reveal">
-          <span class="eyebrow" style="justify-content:center;">The Property</span>
-          <h2 class="section-heading">DESIGNED TO<br><span class="chrome-text">STAND ABOVE.</span></h2>
-        </div>
-
-        <div class="showcase-tabs reveal">
-          <button class="showcase-tab active" data-target="0">Front Elevation</button>
-          <button class="showcase-tab" data-target="1">Side Elevation</button>
-        </div>
-
-        <div class="showcase-stage reveal">
-          <div class="showcase-stage-inner">
-            <div class="showcase-slide active" data-slide="0">
-              <img src="img1.png" alt="Barkat Market Heights front elevation, actual building photo">
-              <div class="showcase-slide-overlay"></div>
-              <div class="showcase-grid-lines"></div>
-              <div class="showcase-caption">
-                <span class="eyebrow">01 &mdash; Front Elevation</span>
-                <h3>The Face of Premium Living</h3>
-              </div>
-            </div>
-            <div class="showcase-slide" data-slide="1">
-              <img src="img2.png" alt="Barkat Market Heights side elevation, actual building photo">
-              <div class="showcase-slide-overlay"></div>
-              <div class="showcase-grid-lines"></div>
-              <div class="showcase-caption">
-                <span class="eyebrow">02 &mdash; Side Elevation</span>
-                <h3>Architecture With Depth</h3>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- LOCATION -->
+  <section id="location" class="page">
+    <div class="page-inner">
+      <div class="loc-copy">
+        <span class="eyebrow-gold">Location</span>
+        <h2>Prime Address</h2>
+        <p>Barkat Market, New Garden Town, Lahore, Punjab, Pakistan — between Garden Town and Johar Town.</p>
+        <a class="btn-map" href="https://www.google.com/maps/place/Barkat+market+heights+(Boys+hostel+and+male+residence)/@31.4993217,74.3191458,17z/data=!3m1!4b1!4m6!3m5!1s0x3919051c338ee383:0x7b12a7c89c9768d0!8m2!3d31.4993172!4d74.3217261!16s%2Fg%2F11nr3hbwfp?entry=ttu&g_ep=EgoyMDI2MDkyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">See on Maps</a>
+      </div>
+      <div class="loc-media">
+        <div class="frame"><img src="loc.png" alt="Location map view"></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PREMIUM EXPERIENCE STATEMENTS ============ -->
-  <section class="section-pad">
-    <div class="container statement-block">
-      <div class="statement-line reveal">LIVE COMFORTABLY.</div>
-      <div class="statement-line filled gold-text reveal">STAY CONNECTED.</div>
-      <div class="statement-line reveal">FEEL AT HOME.</div>
-      <p class="statement-sub reveal">Every detail of Barkat Market Heights is designed around one goal &mdash; making residents feel genuinely at home, without compromising on comfort, style, or security.</p>
-    </div>
-  </section>
-
-  <!-- ============ RESIDENCE FEATURES ============ -->
-  <section class="section-pad" style="background:var(--black-rich);">
-    <div class="container">
-      <div class="section-label-block reveal" style="text-align:center;">
-        <span class="eyebrow" style="justify-content:center;">Residence Features</span>
-        <h2 class="section-heading" style="margin-top:16px;">A NEW STANDARD OF<br><span class="gold-text">PREMIUM LIVING.</span></h2>
+  <!-- PRICING -->
+  <section id="pricing" class="page">
+    <div class="page-inner">
+      <div class="section-head">
+        <span class="eyebrow-gold">Our Plans</span>
+        <h2>Pricing</h2>
       </div>
-      <div class="grid-cards" id="featuresGrid">
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-couch"></i></div><h4>Furnished Rooms</h4><p>Fully furnished, modern, and thoughtfully designed for comfort.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-snowflake"></i></div><h4>AC &amp; Heating</h4><p>Climate comfort throughout every season, all year round.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-bed"></i></div><h4>Dedicated Beds</h4><p>Personal, organized, and private sleeping arrangements.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-shower"></i></div><h4>Modern Washrooms</h4><p>Clean, contemporary, and consistently well maintained.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-mug-saucer"></i></div><h4>Cafés &amp; Restaurants</h4><p>Convenient food options right on the ground floor.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-utensils"></i></div><h4>Dining &amp; Mess</h4><p>Comfortable and reliable daily meal arrangements.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-mosque"></i></div><h4>Prayer Hall</h4><p>A peaceful, dedicated space for daily prayers.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-users"></i></div><h4>Recreational Hall</h4><p>A place to relax, unwind, and connect with others.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-shirt"></i></div><h4>Laundry Areas</h4><p>Convenient washing and laundry facilities on-site.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div><h4>Secure Environment</h4><p>Professionally managed and controlled residence access.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-broom"></i></div><h4>Regular Cleaning</h4><p>Consistent maintenance for a spotless living space.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-gem"></i></div><h4>Premium Interiors</h4><p>Elegant furniture, ceiling work, and modern finishing.</p></div>
+      <div class="price-grid">
+        <div class="price-card">
+          <span class="tag">1-Bed</span>
+          <h3>Private Room</h3>
+          <div class="amount">PKR 55,000</div>
+          <div class="per">/ month</div>
+        </div>
+        <div class="price-card">
+          <span class="tag">2-Bed</span>
+          <h3>Shared Room</h3>
+          <div class="amount">PKR 25,000</div>
+          <div class="per">/ month / person</div>
+        </div>
+        <div class="price-card">
+          <span class="tag">3-Bed</span>
+          <h3>Shared Room</h3>
+          <div class="amount">PKR 25,000</div>
+          <div class="per">/ month / person</div>
+        </div>
+        <div class="price-card">
+          <span class="tag">4-Bed</span>
+          <h3>Shared Room</h3>
+          <div class="amount">PKR 22,500</div>
+          <div class="per">/ month / person</div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ LIFESTYLE ============ -->
-  <section class="section-pad" id="lifestyle-anchor">
-    <div class="container">
-      <div class="section-label-block reveal" style="text-align:center;">
-        <span class="eyebrow" style="justify-content:center;">Everyday Life</span>
-        <h2 class="section-heading" style="margin-top:16px;">DESIGNED AROUND<br><span class="chrome-text">YOUR EVERYDAY LIFE.</span></h2>
-      </div>
-
-      <div class="lifestyle-grid">
-        <div class="lifestyle-panel tall reveal">
-          <img src="img1.png" alt="Barkat Market Heights building exterior, lifestyle view">
-          <div class="lp-overlay"></div>
-          <div class="lp-text">
-            <span class="eyebrow">Arrival</span>
-            <h4>A Presence That Feels Elevated</h4>
-          </div>
-        </div>
-        <div class="lifestyle-panel dark reveal">
-          <h3>DESIGNED FOR MORE THAN JUST A STAY.</h3>
-          <p>From the moment you arrive, every space at Barkat Market Heights is built around comfort, order, and a sense of belonging &mdash; a residence, not just a room.</p>
-        </div>
-        <div class="lifestyle-panel reveal">
-          <img src="img2.png" alt="Barkat Market Heights side view, architectural detail">
-          <div class="lp-overlay"></div>
-          <div class="lp-text">
-            <span class="eyebrow">Architecture</span>
-            <h4>Every Angle, Considered</h4>
-          </div>
-        </div>
+      <div class="price-notes">
+        <div class="note"><b>Electricity</b> is charged separately via sub-meter, split equally among roommates.</div>
+        <div class="note"><b>Mess</b> is not included in the rent.</div>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHY BARKAT MARKET HEIGHTS ============ -->
-  <section class="section-pad" style="background:var(--black-rich);">
-    <div class="container">
-      <div class="section-label-block reveal" style="text-align:center;">
-        <span class="eyebrow" style="justify-content:center;">The Difference</span>
-        <h2 class="section-heading" style="margin-top:16px;">WHY <span class="gold-text">BARKAT MARKET HEIGHTS.</span></h2>
+  <!-- GALLERY -->
+  <section id="gallery" class="page">
+    <div class="page-inner">
+      <div class="section-head">
+        <span class="eyebrow-gold">A Closer Look</span>
+        <h2>Gallery</h2>
       </div>
-
-      <div class="compare-wrap reveal">
-        <div class="compare-col ordinary">
-          <div class="compare-title">Ordinary Hostel</div>
-          <ul class="compare-list">
-            <li><i class="fa-solid fa-xmark"></i>Basic rooms</li>
-            <li><i class="fa-solid fa-xmark"></i>Limited comfort</li>
-            <li><i class="fa-solid fa-xmark"></i>Basic facilities</li>
-            <li><i class="fa-solid fa-xmark"></i>Standard accommodation</li>
-            <li><i class="fa-solid fa-xmark"></i>Just a place to sleep</li>
-            <li><i class="fa-solid fa-xmark"></i>Limited common spaces</li>
-          </ul>
-        </div>
-        <div class="compare-divider"><div class="compare-vs">VS</div></div>
-        <div class="compare-col premium">
-          <div class="compare-title">Barkat Market Heights</div>
-          <ul class="compare-list">
-            <li><i class="fa-solid fa-check"></i>Premium furnished rooms</li>
-            <li><i class="fa-solid fa-check"></i>AC and heating</li>
-            <li><i class="fa-solid fa-check"></i>Five-star-inspired facilities</li>
-            <li><i class="fa-solid fa-check"></i>Professionally managed residence</li>
-            <li><i class="fa-solid fa-check"></i>A complete living experience</li>
-            <li><i class="fa-solid fa-check"></i>Dedicated recreational &amp; community areas</li>
-          </ul>
-        </div>
+      <div class="gallery-grid">
+        <div class="g-item"><img src="pic1.png" alt="Gallery photo 1"></div>
+        <div class="g-item"><img src="pic2.png" alt="Gallery photo 2"></div>
+        <div class="g-item"><img src="pic3.png" alt="Gallery photo 3"></div>
+        <div class="g-item"><img src="pic4.png" alt="Gallery photo 4"></div>
+        <div class="g-item"><img src="pic5.png" alt="Gallery photo 5"></div>
+        <div class="g-item"><img src="pic6.png" alt="Gallery photo 6"></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ ROOMS ============ -->
-  <section class="section-pad" id="rooms">
-    <div class="container">
-      <div class="section-label-block reveal" style="text-align:center;">
-        <span class="eyebrow" style="justify-content:center;">Room Options</span>
-        <h2 class="section-heading" style="margin-top:16px;">FIND YOUR <span class="gold-text">SPACE.</span></h2>
-        <p style="text-align:center; color:var(--silver-bright); max-width:520px; margin:18px auto 0;">Choose the room that fits your lifestyle, privacy, and budget.</p>
+  <!-- FACILITIES -->
+  <section id="facilities" class="page">
+    <div class="page-inner">
+      <div class="section-head">
+        <span class="eyebrow-gold">Premium Facilities</span>
+        <h2>Everything Included</h2>
       </div>
-
-      <div class="room-grid">
-        <div class="room-card reveal">
-          <div class="room-card-inner">
-            <span class="room-badge">Maximum Privacy</span>
-            <h3>1-Bed Private Room</h3>
-            <div class="room-price gold-text">PKR 60,000 <small>/ month</small></div>
-            <p class="desc">Maximum privacy with premium comfort and a personal living experience.</p>
-            <a class="btn btn-outline btn-block magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer"><span>Register Now</span></a>
-          </div>
-        </div>
-        <div class="room-card reveal">
-          <div class="room-card-inner">
-            <span class="room-badge">Most Popular</span>
-            <h3>2-Bed Room</h3>
-            <div class="room-price gold-text">PKR 32,500 <small>/ person / month</small></div>
-            <p class="desc">A balanced living experience with comfort, privacy, and shared convenience.</p>
-            <a class="btn btn-outline btn-block magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer"><span>Register Now</span></a>
-          </div>
-        </div>
-        <div class="room-card reveal">
-          <div class="room-card-inner">
-            <span class="room-badge">Comfort Shared</span>
-            <h3>3-Bed Room</h3>
-            <div class="room-price gold-text">PKR 30,000 <small>/ person / month</small></div>
-            <p class="desc">Comfortable shared living without compromising on quality.</p>
-            <a class="btn btn-outline btn-block magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer"><span>Register Now</span></a>
-          </div>
-        </div>
-        <div class="room-card reveal">
-          <div class="room-card-inner">
-            <span class="room-badge">Best Value</span>
-            <h3>4-Bed Room</h3>
-            <div class="room-price gold-text">PKR 27,500 <small>/ person / month</small></div>
-            <p class="desc">A premium and practical shared living option.</p>
-            <a class="btn btn-outline btn-block magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer"><span>Register Now</span></a>
-          </div>
-        </div>
+      <div class="fac-grid">
+        <div class="fac-item"><div class="dot">F</div><p>Fully Furnished Rooms</p></div>
+        <div class="fac-item"><div class="dot">B</div><p>Dedicated Beds</p></div>
+        <div class="fac-item"><div class="dot">A</div><p>AC &amp; Heating</p></div>
+        <div class="fac-item"><div class="dot">W</div><p>Spacious Washrooms</p></div>
+        <div class="fac-item"><div class="dot">C</div><p>Coffee &amp; Tea Machines</p></div>
+        <div class="fac-item"><div class="dot">C</div><p>Cafés &amp; Restaurants</p></div>
+        <div class="fac-item"><div class="dot">D</div><p>Dining Hall</p></div>
+        <div class="fac-item"><div class="dot">G</div><p>Local Gym</p></div>
+        <div class="fac-item"><div class="dot">M</div><p>Local Mosque</p></div>
+        <div class="fac-item"><div class="dot">L</div><p>Laundry &amp; Washing Areas</p></div>
+        <div class="fac-item"><div class="dot">R</div><p>Regular Cleaning</p></div>
+        <div class="fac-item"><div class="dot">I</div><p>Premium Interiors</p></div>
+        <div class="fac-item"><div class="dot">S</div><p>24/7 Security &amp; CCTV</p></div>
+        <div class="fac-item"><div class="dot">P</div><p>Professional Management</p></div>
+        <div class="fac-item"><div class="dot">N</div><p>Community &amp; Networking</p></div>
+        <div class="fac-item"><div class="dot">P</div><p>Secure Parking</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ FACILITIES ============ -->
-  <section class="section-pad" id="facilities" style="background:var(--black-rich);">
-    <div class="container">
-      <div class="section-label-block reveal" style="text-align:center;">
-        <span class="eyebrow" style="justify-content:center;">Facilities</span>
-        <h2 class="section-heading" style="margin-top:16px;">EVERYTHING YOU NEED.<br><span class="chrome-text">ALL UNDER ONE ROOF.</span></h2>
+  <!-- CONTACT -->
+  <section id="contact" class="page">
+    <div class="page-inner">
+      <div class="contact-block">
+        <span class="eyebrow-gold">Get In Touch</span>
+        <h2>Contact Us</h2>
+        <div class="contact-item"><span class="ic">&#9679;</span>Barkat Market Heights, Main Barkat Market, New Garden Town, Lahore, Pakistan</div>
+        <div class="contact-item"><span class="ic">&#9679;</span><a href="tel:03299922200">0329 9922200</a></div>
+        <div class="contact-item"><span class="ic">&#9679;</span><a href="https://wa.me/923086430502" target="_blank" rel="noopener">WhatsApp: +92 308 6430502</a></div>
       </div>
-      <div class="grid-cards">
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-couch"></i></div><h4>Fully Furnished Rooms</h4><p>Modern, comfortable, and thoughtfully designed.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-temperature-half"></i></div><h4>AC &amp; Heating</h4><p>Comfort throughout every season.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-bed"></i></div><h4>Dedicated Beds</h4><p>Personal comfort and organized living.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-restroom"></i></div><h4>Spacious Washrooms</h4><p>Clean, modern, and convenient.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-mug-hot"></i></div><h4>Cafés &amp; Restaurants</h4><p>Convenient food options on the ground floor.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-kitchen-set"></i></div><h4>Dining &amp; Mess</h4><p>Comfortable and reliable meal arrangements.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-mosque"></i></div><h4>Prayer Hall</h4><p>A peaceful dedicated space.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-champagne-glasses"></i></div><h4>Recreational Hall</h4><p>A place to relax and connect.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-shirt"></i></div><h4>Washing &amp; Laundry</h4><p>Convenient everyday facilities.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div><h4>Secure Environment</h4><p>Professionally managed and controlled.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div><h4>Regular Cleaning</h4><p>A clean and well-maintained experience.</p></div>
-        <div class="feature-card reveal"><div class="feature-icon"><i class="fa-solid fa-gem"></i></div><h4>Premium Interiors</h4><p>Elegant furniture, ceiling work, woodwork &amp; finishing.</p></div>
+      <div class="contact-card">
+        <h3>Book Your Slot</h3>
+        <p>Operational from 1st October, 2026. Secure your room today by completing the registration form or reaching out to us directly.</p>
+        <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSdxx_TUIaHdz9Gw23WXYt-Ez6sXSn2c4PHyB3_QPnFo-c7Blg/viewform?usp=send_form" target="_blank" rel="noopener">Register Now</a>
+        <a class="btn-map" href="https://www.google.com/maps/place/Barkat+market+heights+(Boys+hostel+and+male+residence)/@31.4993217,74.3191458,17z/data=!3m1!4b1!4m6!3m5!1s0x3919051c338ee383:0x7b12a7c89c9768d0!8m2!3d31.4993172!4d74.3217261!16s%2Fg%2F11nr3hbwfp?entry=ttu&g_ep=EgoyMDI2MDkyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">See on Maps</a>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ GALLERY ============ -->
-  <section class="section-pad" id="gallery">
-    <div class="container">
-      <div class="section-label-block reveal" style="text-align:center;">
-        <span class="eyebrow" style="justify-content:center;">Project Gallery</span>
-        <h2 class="section-heading" style="margin-top:16px;">A VISUAL <span class="gold-text">TOUR.</span></h2>
-      </div>
-
-      <div class="gallery-grid" id="galleryGrid">
-        <div class="gallery-item g-wide g-tall reveal" data-full="img1.png" data-label="Front Elevation">
-          <img src="img1.png" alt="Barkat Market Heights front elevation full view">
-          <div class="gi-overlay"><span class="gi-label">Front Elevation</span></div>
-          <div class="gi-expand"><i class="fa-solid fa-expand"></i></div>
-        </div>
-        <div class="gallery-item g-narrow reveal" data-full="img2.png" data-label="Side Elevation">
-          <img src="img2.png" alt="Barkat Market Heights side elevation">
-          <div class="gi-overlay"><span class="gi-label">Side Elevation</span></div>
-          <div class="gi-expand"><i class="fa-solid fa-expand"></i></div>
-        </div>
-        <div class="gallery-item g-narrow reveal" data-full="img1.png" data-label="Architectural Detail">
-          <img src="img1.png" alt="Barkat Market Heights architectural facade detail">
-          <div class="gi-overlay"><span class="gi-label">Facade Detail</span></div>
-          <div class="gi-expand"><i class="fa-solid fa-expand"></i></div>
-        </div>
-        <div class="gallery-item g-narrow reveal" data-full="img2.png" data-label="Building Structure">
-          <img src="img2.png" alt="Barkat Market Heights building structure close view">
-          <div class="gi-overlay"><span class="gi-label">Structure</span></div>
-          <div class="gi-expand"><i class="fa-solid fa-expand"></i></div>
-        </div>
-        <div class="gallery-item g-wide reveal" data-full="img2.png" data-label="Side Perspective">
-          <img src="img2.png" alt="Barkat Market Heights side perspective view">
-          <div class="gi-overlay"><span class="gi-label">Side Perspective</span></div>
-          <div class="gi-expand"><i class="fa-solid fa-expand"></i></div>
-        </div>
-        <div class="gallery-item g-narrow reveal" data-full="img1.png" data-label="Exterior View">
-          <img src="img1.png" alt="Barkat Market Heights exterior view">
-          <div class="gi-overlay"><span class="gi-label">Exterior</span></div>
-          <div class="gi-expand"><i class="fa-solid fa-expand"></i></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ LIGHTBOX ============ -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer"><i class="fa-solid fa-xmark"></i></button>
-    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
-    <img id="lightboxImg" src="" alt="">
-    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
-    <div class="lightbox-caption" id="lightboxCaption"></div>
-  </div>
-
-  <!-- ============ PRICING ============ -->
-  <section class="section-pad" id="pricing" style="background:var(--black-rich);">
-    <div class="container">
-      <div class="section-label-block reveal" style="text-align:center;">
-        <span class="eyebrow" style="justify-content:center;">Pricing</span>
-        <h2 class="section-heading" style="margin-top:16px;">TRANSPARENT <span class="chrome-text">PRICING.</span></h2>
-      </div>
-
-      <div class="reveal" style="overflow-x:auto;">
-        <table class="pricing-table">
-          <thead>
-            <tr><th>Room Type</th><th>Monthly Price</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>1-Bed Private Room</td><td class="price-cell">PKR 60,000</td></tr>
-            <tr><td>2-Bed Room</td><td class="price-cell">PKR 32,500 <span style="font-size:12px; color:var(--silver); font-weight:400;">per person</span></td></tr>
-            <tr><td>3-Bed Room</td><td class="price-cell">PKR 30,000 <span style="font-size:12px; color:var(--silver); font-weight:400;">per person</span></td></tr>
-            <tr><td>4-Bed Room</td><td class="price-cell">PKR 27,500 <span style="font-size:12px; color:var(--silver); font-weight:400;">per person</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="pricing-note reveal">Pricing and room availability are subject to confirmation by the management team.</p>
-      <div class="pricing-cta-row reveal">
-        <a class="btn btn-gold magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer"><span>Start Registration</span><i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ LOCATION ============ -->
-  <section class="section-pad" id="location">
-    <div class="container">
-      <div class="location-wrap">
-        <div class="location-info reveal">
-          <span class="eyebrow">Location</span>
-          <h2 class="section-heading">IN THE HEART<br><span class="gold-text">OF LAHORE.</span></h2>
-          <div class="location-address">
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <div class="addr-title">Barkat Market Heights</div>
-              <div class="addr-text">Barkat Market, New Garden Town, Lahore, Punjab, Pakistan &mdash; between Garden Town and Johar Town.</div>
-            </div>
-          </div>
-          <div class="location-btns">
-            <a class="btn btn-gold btn-sm magnetic" href="https://www.google.com/maps/dir/?api=1&destination=Barkat+Market+Heights+New+Garden+Town+Lahore" target="_blank" rel="noopener noreferrer"><span>Get Directions</span><i class="fa-solid fa-diamond-turn-right"></i></a>
-            <a class="btn btn-outline btn-sm magnetic" href="https://www.google.com/maps/search/?api=1&query=Barkat+Market+New+Garden+Town+Lahore" target="_blank" rel="noopener noreferrer"><span>View on Google Maps</span><i class="fa-solid fa-map-location-dot"></i></a>
-          </div>
-        </div>
-        <div class="map-frame reveal">
-          <iframe src="https://www.google.com/maps?q=Barkat+Market,+New+Garden+Town,+Lahore,+Pakistan&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing Barkat Market Heights area, New Garden Town, Lahore" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ REGISTRATION ============ -->
-  <section class="section-pad" id="register">
-    <div class="container">
-      <div class="registration-box reveal">
-        <h2 class="section-heading">YOUR NEW HOME<br><span class="gold-text">STARTS HERE.</span></h2>
-        <p>Ready to make Barkat Market Heights your new home? Complete the registration form and our management team will guide you through the next steps.</p>
-        <a class="btn btn-gold magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer"><span>Register for Residence</span><i class="fa-solid fa-arrow-right"></i></a>
-        <p class="fine">Submit your registration request. Room availability and confirmation will be communicated by the management team. Submitting the registration form does not guarantee room confirmation.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section-pad" id="contact" style="background:var(--black-rich);">
-    <div class="container">
-      <div class="section-label-block reveal" style="text-align:center;">
-        <span class="eyebrow" style="justify-content:center;">Contact</span>
-        <h2 class="section-heading" style="margin-top:16px;">CALL OR <span class="chrome-text">SUPPORT.</span></h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-card reveal">
-          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-          <h4>Call Now</h4>
-          <div class="contact-value">0323 4540454</div>
-          <a class="btn btn-outline btn-sm btn-block magnetic" href="tel:+923234540454"><span>Call Now</span></a>
-        </div>
-        <div class="contact-card reveal">
-          <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
-          <h4>WhatsApp</h4>
-          <div class="contact-value">0323 4540454</div>
-          <a class="btn btn-gold btn-sm btn-block magnetic" href="https://wa.me/923234540454?text=Hello%2C%20I%20am%20interested%20in%20Barkat%20Market%20Heights%20and%20would%20like%20to%20know%20more%20about%20room%20availability%2C%20pricing%2C%20and%20the%20registration%20process." target="_blank" rel="noopener noreferrer"><span>Chat on WhatsApp</span></a>
-        </div>
-        <div class="contact-card reveal">
-          <div class="contact-icon"><i class="fa-solid fa-file-signature"></i></div>
-          <h4>Registration</h4>
-          <div class="contact-value" style="font-size:16px;">Official Form</div>
-          <a class="btn btn-outline btn-sm btn-block magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer"><span>Register Now</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ ============ -->
-  <section class="section-pad" id="faq">
-    <div class="container">
-      <div class="section-label-block reveal" style="text-align:center;">
-        <span class="eyebrow" style="justify-content:center;">FAQ</span>
-        <h2 class="section-heading" style="margin-top:16px;">FREQUENTLY <span class="gold-text">ASKED.</span></h2>
-      </div>
-
-      <div class="faq-list reveal">
-        <div class="faq-item">
-          <button class="faq-q"><span>Who can stay at Barkat Market Heights?</span><i class="fa-solid fa-plus"></i></button>
-          <div class="faq-a"><div class="faq-a-inner">Barkat Market Heights is designed for male students, working professionals, interns, and individuals seeking premium long-term accommodation in Lahore.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>What room options are available?</span><i class="fa-solid fa-plus"></i></button>
-          <div class="faq-a"><div class="faq-a-inner">Private 1-bed rooms and shared 2-bed, 3-bed, and 4-bed rooms are available.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>Are AC and heating included?</span><i class="fa-solid fa-plus"></i></button>
-          <div class="faq-a"><div class="faq-a-inner">Yes. The residence provides air conditioning and heating for year-round comfort.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>Are rooms furnished?</span><i class="fa-solid fa-plus"></i></button>
-          <div class="faq-a"><div class="faq-a-inner">Yes. Rooms are designed to provide a comfortable and premium living experience.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>Are dining facilities available?</span><i class="fa-solid fa-plus"></i></button>
-          <div class="faq-a"><div class="faq-a-inner">Dining and food facilities are available within the property.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>Is the residence secure?</span><i class="fa-solid fa-plus"></i></button>
-          <div class="faq-a"><div class="faq-a-inner">The property is professionally managed and designed to provide a secure and controlled living environment.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q"><span>How do I reserve a room?</span><i class="fa-solid fa-plus"></i></button>
-          <div class="faq-a"><div class="faq-a-inner">Complete the official registration form. The management team will contact you regarding availability and the next steps.</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FINAL CTA ============ -->
-  <section class="final-cta">
-    <div class="final-cta-media" id="finalCtaMedia">
-      <img src="img1.png" alt="Barkat Market Heights building, final call to action">
-    </div>
-    <div class="final-cta-overlay"></div>
-    <div class="hero-frame"></div>
-    <div class="final-cta-content">
-      <span class="eyebrow" style="justify-content:center;">Live Higher. Live Better.</span>
-      <h2 style="margin-top:16px;">READY TO<br><span class="gold-text">LIVE HIGHER?</span></h2>
-      <p>Experience a new standard of premium hostel living in Lahore.</p>
-      <a class="btn btn-gold magnetic" href="https://forms.gle/h2yDJNeKoG4CAwjQ6" target="_blank" rel="noopener noreferrer"><span>Register Now</span><i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </section>
 
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer>
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#home" class="logo">
-          <span class="logo-mark">BH</span>
-          <span class="logo-text">
-            <span class="lt1 chrome-text">BARKAT MARKET HEIGHTS</span>
-            <span class="lt2">Premium Boys&rsquo; Residence</span>
-          </span>
-        </a>
-        <p>Where hostel living meets five-star comfort. A new standard of premium student and professional living in Lahore.</p>
-        <div class="footer-tagline">Live Higher. Live Better.</div>
-        <div class="footer-social">
-          <a href="tel:+923234540454" aria-label="Call Barkat Market Heights"><i class="fa-solid fa-phone"></i></a>
-          <a href="https://wa.me/923234540454?text=Hello%2C%20I%20am%20interested%20in%20Barkat%20Market%20Heights%20and%20would%20like%20to%20know%20more%20about%20room%20availability%2C%20pricing%2C%20and%20the%20registration%20process." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://www.google.com/maps/search/?api=1&query=Barkat+Market+New+Garden+Town+Lahore" target="_blank" rel="noopener noreferrer" aria-label="View on Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#rooms">Rooms</a></li>
-          <li><a href="#facilities">Facilities</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h5>Property</h5>
-        <ul>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="tel:+923234540454"><i class="fa-solid fa-phone" style="color:var(--gold); margin-right:8px;"></i>0323 4540454</a></li>
-          <li><a href="https://wa.me/923234540454" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" style="color:var(--gold); margin-right:8px;"></i>0323 4540454</a></li>
-          <li style="color:var(--silver-bright); display:flex; gap:8px;"><i class="fa-solid fa-location-dot" style="color:var(--gold); margin-top:4px;"></i><span>Barkat Market, New Garden Town, Lahore</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 Barkat Market Heights. All Rights Reserved.</p>
-      <p>Designed for More Than Just a Stay.</p>
-    </div>
-  </div>
-  <div class="footer-line"></div>
+<footer class="site-footer" id="navBottom">
+  <a data-target="home" class="active">Home</a>
+  <a data-target="location">Location</a>
+  <a data-target="pricing">Pricing</a>
+  <a data-target="gallery">Gallery</a>
+  <a data-target="facilities">Facilities</a>
+  <a data-target="contact">Contact</a>
 </footer>
 
-<!-- ============ FLOATING WHATSAPP ============ -->
-<a class="float-whatsapp magnetic" href="https://wa.me/923234540454?text=Hello%2C%20I%20am%20interested%20in%20Barkat%20Market%20Heights%20and%20would%20like%20to%20know%20more%20about%20room%20availability%2C%20pricing%2C%20and%20the%20registration%20process." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
 <script>
-(function(){
-  "use strict";
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  gsap.registerPlugin(ScrollTrigger);
+  const navLinks = document.querySelectorAll('.site-nav a, .site-footer a');
+  const pages = document.querySelectorAll('.page');
 
-  /* ===================== PRELOADER ===================== */
-  const preloader = document.getElementById('preloader');
-  const pctEl = document.getElementById('preloader-pct');
-  let pct = 0;
-  const pctTimer = setInterval(()=>{
-    pct += Math.floor(Math.random()*14)+6;
-    if(pct >= 100){ pct = 100; clearInterval(pctTimer); }
-    pctEl.textContent = pct + '%';
-  }, 180);
-
-  window.addEventListener('load', ()=>{
-    setTimeout(()=>{
-      preloader.classList.add('hidden');
-      document.body.style.overflow = '';
-      playHeroIntro();
-    }, 2200);
-  });
-  // safety fallback
-  setTimeout(()=>{ preloader.classList.add('hidden'); }, 5000);
-  document.body.style.overflow = 'hidden';
-  setTimeout(()=>{ document.body.style.overflow = ''; }, 2400);
-
-  /* ===================== CUSTOM CURSOR ===================== */
-  const cursorDot = document.getElementById('cursorDot');
-  const cursorRing = document.getElementById('cursorRing');
-  if(window.matchMedia('(hover:hover)').matches){
-    let mx=0,my=0,rx=0,ry=0;
-    window.addEventListener('mousemove', e=>{
-      mx = e.clientX; my = e.clientY;
-      cursorDot.style.left = mx+'px'; cursorDot.style.top = my+'px';
-    });
-    function loopCursor(){
-      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
-      cursorRing.style.left = rx+'px'; cursorRing.style.top = ry+'px';
-      requestAnimationFrame(loopCursor);
-    }
-    loopCursor();
-    document.querySelectorAll('a, button, .room-card, .feature-card, .gallery-item').forEach(el=>{
-      el.addEventListener('mouseenter', ()=>cursorRing.classList.add('grow'));
-      el.addEventListener('mouseleave', ()=>cursorRing.classList.remove('grow'));
-    });
+  function showPage(target){
+    pages.forEach(p => p.classList.toggle('active', p.id === target));
+    navLinks.forEach(a => a.classList.toggle('active', a.dataset.target === target));
+    window.location.hash = target;
   }
 
-  /* ===================== SCROLL PROGRESS ===================== */
-  const progressBar = document.getElementById('scroll-progress');
-  window.addEventListener('scroll', ()=>{
-    const h = document.documentElement;
-    const scrolled = (h.scrollTop)/(h.scrollHeight - h.clientHeight) * 100;
-    progressBar.style.width = scrolled + '%';
-  }, {passive:true});
-
-  /* ===================== HEADER SCROLL STATE ===================== */
-  const header = document.getElementById('siteHeader');
-  window.addEventListener('scroll', ()=>{
-    header.classList.toggle('scrolled', window.scrollY > 60);
-  }, {passive:true});
-
-  /* ===================== MOBILE NAV ===================== */
-  const hamburger = document.getElementById('hamburgerBtn');
-  const mobileNav = document.getElementById('mobileNav');
-  hamburger.addEventListener('click', ()=>{
-    const open = mobileNav.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-  mobileNav.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click', ()=>{
-      mobileNav.classList.remove('open');
-      hamburger.classList.remove('open');
-      document.body.style.overflow = '';
+  navLinks.forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPage(a.dataset.target);
     });
   });
 
-  /* ===================== ACTIVE NAV LINK ===================== */
-  const navLinks = document.querySelectorAll('nav.main-nav a');
-  const sections = Array.from(navLinks).map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
-  window.addEventListener('scroll', ()=>{
-    let current = sections[0];
-    sections.forEach(sec=>{
-      if(window.scrollY + 140 >= sec.offsetTop) current = sec;
-    });
-    navLinks.forEach(a=>{
-      a.classList.toggle('active', a.getAttribute('href') === '#'+current.id);
-    });
-  }, {passive:true});
-
-  /* ===================== HERO WORD REVEAL ===================== */
-  function splitHeroLines(){
-    document.querySelectorAll('.hero-title .line span').forEach(span=>{
-      const text = span.textContent;
-      span.innerHTML = text.split('').map(ch=> ch===' ' ? ' ' : `<i style="display:inline-block;">${ch}</i>`).join('');
-    });
-  }
-  splitHeroLines();
-
-  function playHeroIntro(){
-    if(reduceMotion){ return; }
-    gsap.set('.hero-title .line span i', {y:'110%', opacity:0});
-    gsap.to('.hero-title .line span i', {
-      y:'0%', opacity:1, duration:1.1, ease:'power4.out', stagger:0.018, delay:0.15
-    });
-    gsap.fromTo('.hero-eyebrow', {opacity:0, y:20}, {opacity:1, y:0, duration:1, delay:0.1, ease:'power3.out'});
-    gsap.fromTo('.hero-sub', {opacity:0, y:20}, {opacity:1, y:0, duration:1, delay:0.9, ease:'power3.out'});
-    gsap.fromTo('.hero-btns', {opacity:0, y:20}, {opacity:1, y:0, duration:1, delay:1.05, ease:'power3.out'});
-    gsap.fromTo('.hero-mini-info', {opacity:0, y:20}, {opacity:1, y:0, duration:1, delay:1.15, ease:'power3.out'});
-    gsap.fromTo('.hero-image-wrap', {opacity:0, x:40}, {opacity:1, x:0, duration:1.2, delay:.4, ease:'power3.out'});
-    gsap.fromTo('.scroll-cue', {opacity:0}, {opacity:1, duration:1, delay:1.6});
-  }
-
-  /* ===================== HERO PARALLAX / 3D TILT ===================== */
-  const heroMedia = document.getElementById('heroMedia');
-  const heroFrame = document.querySelector('.hero-image-frame');
-  const heroSection = document.querySelector('.hero');
-  if(!reduceMotion && heroMedia && heroFrame && window.matchMedia('(hover:hover)').matches){
-    heroMedia.addEventListener('mousemove', e=>{
-      const rect = heroMedia.getBoundingClientRect();
-      const px = (e.clientX - rect.left)/rect.width - 0.5;
-      const py = (e.clientY - rect.top)/rect.height - 0.5;
-      gsap.to(heroFrame, { rotateY: px*8, rotateX: -py*8, duration:1, ease:'power2.out', transformPerspective:900 });
-    });
-    heroMedia.addEventListener('mouseleave', ()=>{
-      gsap.to(heroFrame, { rotateY:0, rotateX:0, duration:1 });
-    });
-  }
-  if(!reduceMotion && heroFrame){
-    // subtle scroll parallax on the image itself
-    gsap.to(heroFrame.querySelector('img'), {
-      yPercent: 8, ease:'none',
-      scrollTrigger:{ trigger:heroSection, start:'top top', end:'bottom top', scrub:true }
-    });
-  }
-
-  /* ===================== SCROLL REVEALS ===================== */
-  document.querySelectorAll('.reveal').forEach(el=>{
-    ScrollTrigger.create({
-      trigger: el,
-      start: 'top 88%',
-      onEnter: ()=> el.classList.add('up-visible'),
-      once:true
-    });
+  window.addEventListener('DOMContentLoaded', () => {
+    const initial = window.location.hash.replace('#','') || 'home';
+    if(document.getElementById(initial)) showPage(initial);
   });
-  gsap.set('.reveal', {}); // ensure class exists
-  const style = document.createElement('style');
-  style.textContent = `.reveal{ transition: opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1); }`;
-  document.head.appendChild(style);
-
-  /* ===================== ANIMATED COUNTERS ===================== */
-  document.querySelectorAll('.stat-num').forEach(el=>{
-    const target = parseInt(el.getAttribute('data-count'),10);
-    ScrollTrigger.create({
-      trigger: el, start:'top 90%', once:true,
-      onEnter: ()=>{
-        const obj = {val:0};
-        gsap.to(obj, {
-          val: target, duration:1.8, ease:'power2.out',
-          onUpdate: ()=>{ el.textContent = Math.floor(obj.val); },
-          onComplete: ()=>{ el.textContent = target; }
-        });
-      }
-    });
-  });
-
-  /* ===================== MAGNETIC BUTTONS ===================== */
-  if(!reduceMotion && window.matchMedia('(hover:hover)').matches){
-    document.querySelectorAll('.magnetic').forEach(btn=>{
-      btn.addEventListener('mousemove', e=>{
-        const r = btn.getBoundingClientRect();
-        const x = e.clientX - r.left - r.width/2;
-        const y = e.clientY - r.top - r.height/2;
-        gsap.to(btn, { x:x*0.25, y:y*0.35, duration:.5, ease:'power2.out' });
-      });
-      btn.addEventListener('mouseleave', ()=>{
-        gsap.to(btn, { x:0, y:0, duration:.6, ease:'elastic.out(1,0.4)' });
-      });
-    });
-  }
-
-  /* ===================== 3D CARD TILT (rooms & features) ===================== */
-  if(!reduceMotion && window.matchMedia('(hover:hover)').matches){
-    document.querySelectorAll('.room-card, .feature-card').forEach(card=>{
-      card.addEventListener('mousemove', e=>{
-        const r = card.getBoundingClientRect();
-        const px = (e.clientX - r.left)/r.width - 0.5;
-        const py = (e.clientY - r.top)/r.height - 0.5;
-        gsap.to(card, { rotateY: px*10, rotateX: -py*10, duration:.5, ease:'power2.out', transformPerspective:800 });
-      });
-      card.addEventListener('mouseleave', ()=>{
-        gsap.to(card, { rotateY:0, rotateX:0, duration:.7, ease:'power3.out' });
-      });
-    });
-  }
-
-  /* ===================== BUILDING SHOWCASE TABS ===================== */
-  const showcaseTabs = document.querySelectorAll('.showcase-tab');
-  const showcaseSlides = document.querySelectorAll('.showcase-slide');
-  showcaseTabs.forEach(tab=>{
-    tab.addEventListener('click', ()=>{
-      const target = tab.getAttribute('data-target');
-      showcaseTabs.forEach(t=>t.classList.remove('active'));
-      tab.classList.add('active');
-      showcaseSlides.forEach(s=>{
-        s.classList.toggle('active', s.getAttribute('data-slide') === target);
-      });
-    });
-  });
-
-  /* ===================== FAQ ACCORDION ===================== */
-  document.querySelectorAll('.faq-item').forEach(item=>{
-    const q = item.querySelector('.faq-q');
-    const a = item.querySelector('.faq-a');
-    q.addEventListener('click', ()=>{
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(other=>{
-        if(other!==item){
-          other.classList.remove('open');
-          other.querySelector('.faq-a').style.maxHeight = null;
-        }
-      });
-      item.classList.toggle('open', !isOpen);
-      a.style.maxHeight = !isOpen ? a.scrollHeight+'px' : null;
-    });
-  });
-
-  /* ===================== GALLERY LIGHTBOX ===================== */
-  const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxCaption = document.getElementById('lightboxCaption');
-  let currentIndex = 0;
-
-  function openLightbox(idx){
-    currentIndex = idx;
-    const item = galleryItems[currentIndex];
-    lightboxImg.src = item.getAttribute('data-full');
-    lightboxImg.alt = item.getAttribute('data-label');
-    lightboxCaption.textContent = item.getAttribute('data-label');
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox(){
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function showNext(dir){
-    currentIndex = (currentIndex + dir + galleryItems.length) % galleryItems.length;
-    const item = galleryItems[currentIndex];
-    lightboxImg.src = item.getAttribute('data-full');
-    lightboxCaption.textContent = item.getAttribute('data-label');
-  }
-  galleryItems.forEach((item, idx)=>{
-    item.addEventListener('click', ()=> openLightbox(idx));
-  });
-  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-  document.getElementById('lightboxNext').addEventListener('click', ()=> showNext(1));
-  document.getElementById('lightboxPrev').addEventListener('click', ()=> showNext(-1));
-  lightbox.addEventListener('click', e=>{ if(e.target === lightbox) closeLightbox(); });
-  window.addEventListener('keydown', e=>{
-    if(!lightbox.classList.contains('open')) return;
-    if(e.key === 'Escape') closeLightbox();
-    if(e.key === 'ArrowRight') showNext(1);
-    if(e.key === 'ArrowLeft') showNext(-1);
-  });
-
-  /* ===================== PARALLAX ON MEDIA PANELS ===================== */
-  if(!reduceMotion){
-    gsap.utils.toArray('.about-media-frame img, .lifestyle-panel img, .final-cta-media img').forEach(img=>{
-      gsap.fromTo(img, {yPercent:-6}, {
-        yPercent:6, ease:'none',
-        scrollTrigger:{ trigger: img, start:'top bottom', end:'bottom top', scrub:true }
-      });
-    });
-  }
-
-  /* ===================== SMOOTH SCROLL FOR NAV ===================== */
-  document.querySelectorAll('a[href^="#"]').forEach(link=>{
-    link.addEventListener('click', function(e){
-      const id = this.getAttribute('href');
-      if(id.length > 1){
-        const target = document.querySelector(id);
-        if(target){
-          e.preventDefault();
-          const y = target.getBoundingClientRect().top + window.scrollY - 70;
-          window.scrollTo({top:y, behavior: reduceMotion ? 'auto' : 'smooth'});
-        }
-      }
-    });
-  });
-
-})();
 </script>
+
 </body>
 </html>
