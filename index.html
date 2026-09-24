@@ -79,6 +79,7 @@
     font-size:.72rem;
     letter-spacing:.08em;
     text-transform:uppercase;
+    font-weight:700;
     color:var(--coffee-deep);
     padding:6px 12px;
     border-radius:3px;
@@ -221,6 +222,19 @@
     margin-bottom:2px;
   }
   .home-media{ text-align:center; }
+  .home-media .coworking-line{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    background:var(--cream-deep);
+    border-left:2px solid var(--gold);
+    padding:8px 12px;
+    font-size:.78rem;
+    border-radius:2px;
+    text-align:left;
+    margin-bottom:10px;
+  }
   .home-media .frame{
     width:100%;
     max-height:64vh;
@@ -428,6 +442,7 @@
     font-size:.68rem;
     letter-spacing:.08em;
     text-transform:uppercase;
+    font-weight:700;
     color:var(--coffee-deep);
     padding:6px 12px;
     border-radius:3px;
@@ -494,7 +509,7 @@
   <section id="home" class="page">
     <div class="page-inner">
       <div class="home-copy">
-        <span class="eyebrow-gold">Experience Comfort just like home</span>
+        <span class="eyebrow-gold">Live Higher</span>
         <h2>A premium residence for professionals, students and overseas Pakistanis — designed for comfort, convenience, security, and a better way of living.
           <span class="accent">Where accommodation meets home feeling.</span>
         </h2>
@@ -508,10 +523,6 @@
 
         <div class="home-extra">
           <div class="line">Residence available for corporate firms and sector employees.</div>
-          <div class="line">
-            <span>Co-working space available — book your slot.</span>
-            <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book Now</a>
-          </div>
         </div>
 
         <div class="stat-row">
@@ -523,6 +534,10 @@
       </div>
 
       <div class="home-media">
+        <div class="line coworking-line">
+          <span>Co-working space available — book your slot.</span>
+          <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book Now</a>
+        </div>
         <div class="frame"><img src="pic.png" alt="Barkat Market Heights building"></div>
         <p class="caption">Facilities: <b>WiFi · AC · Mess · Gym</b></p>
       </div>
