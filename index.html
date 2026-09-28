@@ -457,6 +457,54 @@
     margin-top:10px;
   }
 
+  /* ---------- BUSINESS HUB ---------- */
+  #business{ justify-content:flex-start; }
+  .sub-nav{
+    position:sticky;
+    top:var(--header-h);
+    z-index:20;
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    padding:8px 0;
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+    margin-bottom:8px;
+  }
+  .sub-nav a{
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--coffee-deep);
+    background:var(--cream-deep);
+    padding:7px 16px;
+    border-radius:3px;
+  }
+  .biz-block{ padding:16px 0 22px; scroll-margin-top:calc(var(--header-h) + 48px); border-bottom:1px solid var(--line); }
+  .biz-block:last-child{ border-bottom:none; }
+  .biz-block h3{ font-size:1.35rem; margin-bottom:10px; }
+  .ph-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:12px; }
+  .ph{
+    aspect-ratio:16/10;
+    background:var(--cream-deep);
+    border:1px dashed var(--gold);
+    border-radius:3px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:.72rem; color:var(--espresso);
+  }
+  .biz-details{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .biz-details.three{ margin-bottom:12px; }
+  .detail-card{
+    background:var(--cream-deep);
+    border-top:2px solid var(--gold);
+    border-radius:3px;
+    padding:14px;
+  }
+  .detail-card h4{ font-family:'Jost',sans-serif; font-size:.85rem; font-weight:700; margin-bottom:6px; color:var(--coffee-deep); }
+  .detail-card p{ font-size:.78rem; line-height:1.55; color:var(--espresso); margin:0 0 6px; }
+  .detail-card .btn-mini, .biz-block > .btn-mini{ display:inline-block; margin-top:4px; }
+
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:900px){
     #home .page-inner, #location .page-inner, #contact .page-inner{
@@ -479,6 +527,10 @@
     section.page{ padding:16px 16px 24px; }
     .fac-grid{ grid-template-columns:repeat(2,1fr); }
     .price-grid{ grid-template-columns:1fr 1fr; }
+    .ph-row{ grid-template-columns:1fr 1fr; }
+    .biz-details{ grid-template-columns:1fr; }
+    .sub-nav{ gap:4px; }
+    .sub-nav a{ padding:6px 8px; font-size:.62rem; }
   }
 </style>
 </head>
@@ -498,6 +550,7 @@
     <a href="#pricing" data-target="pricing">Pricing</a>
     <a href="#gallery" data-target="gallery">Gallery</a>
     <a href="#facilities" data-target="facilities">Facilities</a>
+    <a href="#business" data-target="business">Business Hub</a>
     <a href="#contact" data-target="contact">Contact</a>
   </nav>
   <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSdxx_TUIaHdz9Gw23WXYt-Ez6sXSn2c4PHyB3_QPnFo-c7Blg/viewform?usp=send_form" target="_blank" rel="noopener">Register Now</a>
@@ -509,7 +562,7 @@
   <section id="home" class="page">
     <div class="page-inner">
       <div class="home-copy">
-        <span class="eyebrow-gold">Comfort Like Home</span>
+        <span class="eyebrow-gold">Comfort Just Like Home</span>
         <h2>A premium residence for professionals, students and overseas Pakistanis — designed for comfort, convenience, security, and a better way of living.
           <span class="accent">Where accommodation meets home feeling.</span>
         </h2>
@@ -535,8 +588,8 @@
 
       <div class="home-media">
         <div class="line coworking-line">
-          <span>Co-working space available — book your slot.</span>
-          <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book Now</a>
+          <span><b>Business Hub</b> — corporate offices, private offices &amp; commercial spaces.</span>
+          <a class="btn-mini" href="#business">View</a>
         </div>
         <div class="frame"><img src="pic.png" alt="Barkat Market Heights building"></div>
         <p class="caption">Facilities: <b>WiFi · AC · Mess · Gym</b></p>
@@ -652,6 +705,95 @@
     </div>
   </section>
 
+  <!-- BUSINESS HUB -->
+  <section id="business" class="page">
+    <div class="page-inner">
+      <div class="section-head">
+        <span class="eyebrow-gold">Offices &amp; Commercial Spaces</span>
+        <h2>Business Hub</h2>
+        <p class="section-sub">Painted walls, floors and ceilings, professionally managed. AC/heating, daily cleaning and direct parking access.</p>
+      </div>
+
+      <nav class="sub-nav">
+        <a href="#biz-commercial">Commercial Space</a>
+        <a href="#biz-single">Private Offices</a>
+        <a href="#biz-corporate">Corporate Offices</a>
+      </nav>
+
+      <!-- Commercial -->
+      <div class="biz-block" id="biz-commercial">
+        <h3>Commercial Space</h3>
+        <div class="ph-row">
+          <div class="ph">Photo 1</div><div class="ph">Photo 2</div><div class="ph">Photo 3</div><div class="ph">Photo 4</div>
+        </div>
+        <div class="biz-details">
+          <div class="detail-card">
+            <h4>Hall Area: 1,700 sq ft</h4>
+            <p>Ideal for cafés, gyms and other commercial use.</p>
+          </div>
+          <div class="detail-card">
+            <h4>Facilities</h4>
+            <p>AC &amp; heating · Daily cleaning · Direct parking access · Window wall with parking view · Spacious open area · Painted walls, floor &amp; ceiling · Professional management</p>
+          </div>
+          <div class="detail-card">
+            <h4>Price</h4>
+            <p>To be revealed soon.</p>
+            <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Private offices -->
+      <div class="biz-block" id="biz-single">
+        <h3>Private Offices</h3>
+        <div class="ph-row">
+          <div class="ph">Photo 1</div><div class="ph">Photo 2</div><div class="ph">Photo 3</div><div class="ph">Photo 4</div>
+        </div>
+        <div class="biz-details three">
+          <div class="detail-card">
+            <h4>Small Office</h4>
+            <p>Size: to be revealed soon</p>
+            <p>Price: to be revealed soon</p>
+          </div>
+          <div class="detail-card">
+            <h4>Medium Office</h4>
+            <p>Size: to be revealed soon</p>
+            <p>Price: to be revealed soon</p>
+          </div>
+          <div class="detail-card">
+            <h4>Large Office</h4>
+            <p>Size: to be revealed soon</p>
+            <p>Price: to be revealed soon</p>
+          </div>
+        </div>
+        <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book on WhatsApp</a>
+      </div>
+
+      <!-- Corporate offices -->
+      <div class="biz-block" id="biz-corporate">
+        <h3>Corporate Offices</h3>
+        <div class="ph-row">
+          <div class="ph">Photo 1</div><div class="ph">Photo 2</div><div class="ph">Photo 3</div><div class="ph">Photo 4</div>
+        </div>
+        <div class="biz-details">
+          <div class="detail-card">
+            <h4>Whole Floor: 4,500 sq ft</h4>
+            <p>15 collective offices on one floor. Suitable for companies, academies and schools.</p>
+          </div>
+          <div class="detail-card">
+            <h4>Facilities</h4>
+            <p>Well-furnished, well-built rooms · AC in all rooms · Daily cleaning · Direct parking access · Professional management</p>
+          </div>
+          <div class="detail-card">
+            <h4>Price</h4>
+            <p>To be discussed at booking.</p>
+            <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="page">
     <div class="page-inner">
@@ -697,6 +839,7 @@
     <a href="#pricing" data-target="pricing" class="foot-link">Pricing</a>
     <a href="#gallery" data-target="gallery" class="foot-link">Gallery</a>
     <a href="#facilities" data-target="facilities" class="foot-link">Facilities</a>
+    <a href="#business" data-target="business" class="foot-link">Business Hub</a>
     <a href="#contact" data-target="contact" class="foot-link">Contact</a>
   </nav>
   <p class="footer-copy">© 2026 Barkat Market Heights — Premium Boys' Residence. All rights reserved.</p>
