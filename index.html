@@ -226,18 +226,32 @@
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:10px;
+    gap:14px;
     background:var(--cream-deep);
     border-left:2px solid var(--gold);
-    padding:8px 12px;
-    font-size:.78rem;
+    padding:14px 16px;
     border-radius:2px;
     text-align:left;
-    margin-bottom:10px;
+    margin-bottom:14px;
+  }
+  .home-media .coworking-line .cw-text{
+    font-size:clamp(1rem,1.6vw,1.3rem);
+    line-height:1.3;
+    font-weight:500;
+    color:var(--espresso);
+  }
+  .home-media .coworking-line .cw-text b{ color:var(--coffee-deep); }
+  .home-media .coworking-line .cw-sub{
+    display:block;
+    margin-top:5px;
+    font-size:.72rem;
+    font-weight:400;
+    letter-spacing:.02em;
+    color:var(--gold);
   }
   .home-media .frame{
     width:100%;
-    max-height:64vh;
+    max-height:56vh;
     border:1px solid var(--gold);
     border-radius:3px;
     overflow:hidden;
@@ -488,11 +502,11 @@
   .ph{
     aspect-ratio:16/10;
     background:var(--cream-deep);
-    border:1px dashed var(--gold);
+    border:1px solid var(--gold-pale);
     border-radius:3px;
-    display:flex; align-items:center; justify-content:center;
-    font-size:.72rem; color:var(--espresso);
+    overflow:hidden;
   }
+  .ph img{ width:100%; height:100%; object-fit:cover; }
   .biz-details{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
   .biz-details.three{ margin-bottom:12px; }
   .detail-card{
@@ -504,6 +518,7 @@
   .detail-card h4{ font-family:'Jost',sans-serif; font-size:.85rem; font-weight:700; margin-bottom:6px; color:var(--coffee-deep); }
   .detail-card p{ font-size:.78rem; line-height:1.55; color:var(--espresso); margin:0 0 6px; }
   .detail-card .btn-mini, .biz-block > .btn-mini{ display:inline-block; margin-top:4px; }
+  .facilities-line{ font-size:.78rem; color:var(--espresso); margin:0 0 8px; }
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:900px){
@@ -588,7 +603,10 @@
 
       <div class="home-media">
         <div class="line coworking-line">
-          <span><b>Business Hub</b> — corporate offices, private offices &amp; commercial spaces.</span>
+          <div class="cw-text">
+            <b>Business Hub</b> — corporate offices, private offices &amp; commercial spaces.
+            <span class="cw-sub">Ideal for schools, academies, clinics, private sector offices and freelancers.</span>
+          </div>
           <a class="btn-mini" href="#business">View</a>
         </div>
         <div class="frame"><img src="pic.png" alt="Barkat Market Heights building"></div>
@@ -711,7 +729,7 @@
       <div class="section-head">
         <span class="eyebrow-gold">Offices &amp; Commercial Spaces</span>
         <h2>Business Hub</h2>
-        <p class="section-sub">Painted walls, floors and ceilings, professionally managed. AC/heating, daily cleaning and direct parking access.</p>
+        <p class="section-sub">Painted walls, floors and ceilings, professionally managed. Daily cleaning and direct parking access.</p>
       </div>
 
       <nav class="sub-nav">
@@ -724,16 +742,19 @@
       <div class="biz-block" id="biz-commercial">
         <h3>Commercial Space</h3>
         <div class="ph-row">
-          <div class="ph">Photo 1</div><div class="ph">Photo 2</div><div class="ph">Photo 3</div><div class="ph">Photo 4</div>
+          <div class="ph"><img src="c1.png" alt="Commercial space photo 1"></div>
+          <div class="ph"><img src="c2.png" alt="Commercial space photo 2"></div>
+          <div class="ph"><img src="c3.png" alt="Commercial space photo 3"></div>
+          <div class="ph"><img src="c4.png" alt="Commercial space photo 4"></div>
         </div>
         <div class="biz-details">
           <div class="detail-card">
-            <h4>Hall Area: 1,700 sq ft</h4>
+            <h4>Hall Area: 1,421 sq ft</h4>
             <p>Ideal for cafés, gyms and other commercial use.</p>
           </div>
           <div class="detail-card">
             <h4>Facilities</h4>
-            <p>AC &amp; heating · Daily cleaning · Direct parking access · Window wall with parking view · Spacious open area · Painted walls, floor &amp; ceiling · Professional management</p>
+            <p>Daily cleaning · Direct parking access · Window wall with parking view · Spacious open area · Painted walls, floor &amp; ceiling · Professional management</p>
           </div>
           <div class="detail-card">
             <h4>Price</h4>
@@ -747,25 +768,29 @@
       <div class="biz-block" id="biz-single">
         <h3>Private Offices</h3>
         <div class="ph-row">
-          <div class="ph">Photo 1</div><div class="ph">Photo 2</div><div class="ph">Photo 3</div><div class="ph">Photo 4</div>
+          <div class="ph"><img src="p1.png" alt="Private office photo 1"></div>
+          <div class="ph"><img src="p2.png" alt="Private office photo 2"></div>
+          <div class="ph"><img src="p3.png" alt="Private office photo 3"></div>
+          <div class="ph"><img src="p4.png" alt="Private office photo 4"></div>
         </div>
         <div class="biz-details three">
           <div class="detail-card">
             <h4>Small Office</h4>
-            <p>Size: to be revealed soon</p>
-            <p>Price: to be revealed soon</p>
+            <p>Size: 11 x 11 ft</p>
+            <p>Price: PKR 55,000 / month</p>
           </div>
           <div class="detail-card">
             <h4>Medium Office</h4>
-            <p>Size: to be revealed soon</p>
-            <p>Price: to be revealed soon</p>
+            <p>Size: 14 x 12 ft</p>
+            <p>Price: PKR 65,000 / month</p>
           </div>
           <div class="detail-card">
             <h4>Large Office</h4>
-            <p>Size: to be revealed soon</p>
-            <p>Price: to be revealed soon</p>
+            <p>Size: 14 x 15 ft</p>
+            <p>Price: PKR 75,000 / month</p>
           </div>
         </div>
+        <p class="facilities-line">Facilities: Daily cleaning · Direct parking access · Painted walls, floor &amp; ceiling · Professional management</p>
         <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book on WhatsApp</a>
       </div>
 
@@ -773,7 +798,10 @@
       <div class="biz-block" id="biz-corporate">
         <h3>Corporate Offices</h3>
         <div class="ph-row">
-          <div class="ph">Photo 1</div><div class="ph">Photo 2</div><div class="ph">Photo 3</div><div class="ph">Photo 4</div>
+          <div class="ph"><img src="o1.png" alt="Corporate office photo 1"></div>
+          <div class="ph"><img src="o2.png" alt="Corporate office photo 2"></div>
+          <div class="ph"><img src="o3.png" alt="Corporate office photo 3"></div>
+          <div class="ph"><img src="o4.png" alt="Corporate office photo 4"></div>
         </div>
         <div class="biz-details">
           <div class="detail-card">
@@ -786,7 +814,7 @@
           </div>
           <div class="detail-card">
             <h4>Price</h4>
-            <p>To be discussed at booking.</p>
+            <p>Consult on WhatsApp.</p>
             <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book on WhatsApp</a>
           </div>
         </div>
