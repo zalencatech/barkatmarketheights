@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Barkat Market Heights — Premium Residence</title>
+<title>Barkat Market Heights — Residence, Business Hub &amp; AI Technology Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -33,15 +33,14 @@
   h1,h2,h3,h4{ font-family:'Cormorant Garamond', serif; font-weight:600; margin:0; color:var(--coffee-deep); }
   a{ color:inherit; text-decoration:none; }
   img{ max-width:100%; display:block; }
-  button{ font-family:inherit; }
 
-  /* ---------- HEADER (compact, sticky, single row) ---------- */
+  /* ---------- HEADER ---------- */
   .site-header{
     position:sticky; top:0; z-index:30;
     height:var(--header-h);
     display:flex;
     align-items:center;
-    gap:18px;
+    gap:14px;
     padding:0 20px;
     background:linear-gradient(180deg, var(--panel), var(--panel-deep));
     border-bottom:1px solid var(--gold);
@@ -71,27 +70,23 @@
   .site-nav{
     display:flex;
     align-items:center;
-    gap:2px;
+    gap:1px;
     margin:0 auto;
     flex-wrap:nowrap;
   }
   .site-nav a{
-    font-size:.72rem;
-    letter-spacing:.08em;
+    font-size:.68rem;
+    letter-spacing:.06em;
     text-transform:uppercase;
     font-weight:700;
     color:var(--coffee-deep);
-    padding:6px 12px;
+    padding:6px 9px;
     border-radius:3px;
     white-space:nowrap;
     opacity:.82;
   }
   .site-nav a:hover{ opacity:1; }
-  .site-nav a.active{
-    color:var(--coffee-deep);
-    background:var(--cream);
-    opacity:1;
-  }
+  .site-nav a.active{ background:var(--cream); opacity:1; }
   .btn-register{
     flex:0 0 auto;
     background:var(--coffee-deep);
@@ -110,74 +105,79 @@
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:22px clamp(20px,5vw,64px);
+    padding:18px clamp(20px,5vw,64px);
     scroll-margin-top:var(--header-h);
     border-bottom:1px solid var(--line);
   }
-  .page-inner{
-    max-width:1280px;
-    margin:0 auto;
-    width:100%;
-  }
+  .page-inner{ max-width:1280px; margin:0 auto; width:100%; }
   .eyebrow-gold{
     display:inline-block;
-    font-size:.66rem;
+    font-size:.64rem;
     letter-spacing:.26em;
     color:var(--gold);
     text-transform:uppercase;
-    margin-bottom:6px;
+    margin-bottom:5px;
+  }
+  .section-head{ text-align:center; margin-bottom:clamp(10px,2vh,20px); }
+  .section-head h2{ font-size:clamp(1.3rem,2.4vw,1.9rem); font-weight:500; }
+  .section-sub{ font-size:.82rem; color:var(--espresso); margin-top:6px; }
+  .btn-mini{
+    display:inline-block;
+    flex:0 0 auto;
+    background:var(--coffee-deep);
+    color:var(--gold-pale);
+    font-size:.68rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    padding:7px 14px;
+    border-radius:2px;
+    white-space:nowrap;
   }
 
   /* ---------- HOME ---------- */
   #home .page-inner{
     display:grid;
-    grid-template-columns:1.15fr 0.85fr;
-    gap:clamp(20px,4vw,50px);
+    grid-template-columns:1fr 1fr;
+    gap:clamp(18px,3vw,40px);
     align-items:start;
   }
   .home-copy h2{
-    font-size:clamp(1.25rem,2.2vw,1.75rem);
-    line-height:1.28;
+    font-size:clamp(1.05rem,1.8vw,1.45rem);
+    line-height:1.3;
     font-weight:500;
     color:var(--espresso);
   }
   .home-copy h2 .accent{
     display:block;
-    margin-top:6px;
-    font-family:'Cormorant Garamond',serif;
+    margin-top:5px;
     font-style:italic;
     font-weight:600;
-    font-size:1.1em;
+    font-size:1.12em;
     color:var(--gold);
   }
   .home-cta{
-    margin-top:14px;
+    margin-top:12px;
     display:inline-block;
     background:var(--gold-bright);
     color:var(--coffee-deep);
     font-weight:600;
-    font-size:.85rem;
-    padding:10px 22px;
+    font-size:.8rem;
+    letter-spacing:.04em;
+    padding:9px 20px;
     border-radius:3px;
   }
   .home-facts{
-    margin-top:16px;
+    margin-top:12px;
     display:flex;
     flex-direction:column;
-    gap:5px;
-    font-size:.8rem;
+    gap:3px;
+    font-size:.76rem;
     color:var(--espresso);
     border-top:1px solid var(--line);
-    padding-top:10px;
+    padding-top:8px;
   }
   .home-facts span{ color:var(--gold); margin-right:6px; }
-  .home-extra{
-    margin-top:14px;
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-  }
-  .home-extra .line{
+  .line{
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -185,85 +185,49 @@
     background:var(--cream-deep);
     border-left:2px solid var(--gold);
     padding:8px 12px;
-    font-size:.78rem;
+    font-size:.74rem;
     border-radius:2px;
+    text-align:left;
   }
-  .btn-mini{
-    flex:0 0 auto;
-    background:var(--coffee-deep);
-    color:var(--gold-pale);
-    font-size:.68rem;
-    letter-spacing:.04em;
-    padding:6px 12px;
-    border-radius:2px;
-    white-space:nowrap;
-  }
+  .home-extra{ margin-top:10px; }
   .stat-row{
-    margin-top:16px;
+    margin-top:10px;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
     gap:8px;
   }
   .stat{
     background:var(--coffee-deep);
     color:var(--gold-pale);
     border-radius:3px;
-    padding:10px 6px;
+    padding:8px 6px;
     text-align:center;
-    font-size:.66rem;
+    font-size:.62rem;
     letter-spacing:.03em;
   }
   .stat span{
     display:block;
     font-family:'Cormorant Garamond',serif;
-    font-size:1.15rem;
+    font-size:1.05rem;
     font-weight:700;
-    color:var(--gold-pale);
-    margin-bottom:2px;
+    margin-bottom:1px;
   }
   .home-media{ text-align:center; }
-  .home-media .coworking-line{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:14px;
-    background:var(--cream-deep);
-    border-left:2px solid var(--gold);
-    padding:14px 16px;
-    border-radius:2px;
-    text-align:left;
-    margin-bottom:14px;
-  }
-  .home-media .coworking-line .cw-text{
-    font-size:clamp(1rem,1.6vw,1.3rem);
-    line-height:1.3;
-    font-weight:500;
-    color:var(--espresso);
-  }
-  .home-media .coworking-line .cw-text b{ color:var(--coffee-deep); }
-  .home-media .coworking-line .cw-sub{
-    display:block;
-    margin-top:5px;
-    font-size:.72rem;
-    font-weight:400;
-    letter-spacing:.02em;
-    color:var(--gold);
-  }
+  .home-media .line{ margin-bottom:8px; }
+  .home-media .line .note-text{ font-size:.8rem; line-height:1.3; color:var(--espresso); }
+  .home-media .line .note-text b{ color:var(--coffee-deep); }
+  .home-media .line .note-sub{ display:block; margin-top:2px; font-size:.66rem; color:var(--gold); }
   .home-media .frame{
     width:100%;
-    max-height:56vh;
+    max-height:62vh;
     border:1px solid var(--gold);
     border-radius:3px;
     overflow:hidden;
     background:var(--cream-deep);
+    margin-top:2px;
   }
-  .home-media img{ width:100%; height:100%; object-fit:contain; display:block; }
-  .home-media .caption{
-    margin-top:8px;
-    font-size:.75rem;
-    letter-spacing:.03em;
-    color:var(--espresso);
-  }
+  .home-media img{ width:100%; height:100%; max-height:62vh; object-fit:contain; display:block; }
+  .home-media .caption{ margin-top:6px; font-size:.72rem; letter-spacing:.03em; color:var(--espresso); }
   .home-media .caption b{ color:var(--gold); font-weight:600; }
 
   /* ---------- LOCATION ---------- */
@@ -300,14 +264,7 @@
   .loc-media img{ width:100%; height:100%; object-fit:contain; }
 
   /* ---------- PRICING ---------- */
-  .section-head{ text-align:center; margin-bottom:clamp(12px,2.5vh,22px); }
-  .section-head h2{ font-size:clamp(1.3rem,2.4vw,1.9rem); font-weight:500; }
-  .section-sub{ font-size:.82rem; color:var(--espresso); margin-top:6px; }
-  .price-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:14px;
-  }
+  .price-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
   .price-card{
     background:var(--cream-deep);
     border-top:2px solid var(--gold);
@@ -315,14 +272,7 @@
     padding:16px 12px;
     text-align:center;
   }
-  .price-card .tag{
-    display:inline-block;
-    font-size:.66rem;
-    letter-spacing:.12em;
-    color:var(--gold);
-    text-transform:uppercase;
-    margin-bottom:2px;
-  }
+  .price-card .tag{ display:inline-block; font-size:.66rem; letter-spacing:.12em; color:var(--gold); text-transform:uppercase; margin-bottom:2px; }
   .price-card h3{ font-size:.92rem; font-weight:600; color:var(--espresso); margin-bottom:10px; }
   .price-card .amount{
     font-family:'Cormorant Garamond',serif;
@@ -332,13 +282,7 @@
     line-height:1;
   }
   .price-card .per{ font-size:.68rem; color:var(--espresso); margin-top:5px; }
-  .price-notes{
-    margin-top:16px;
-    display:flex;
-    gap:12px;
-    justify-content:center;
-    flex-wrap:wrap;
-  }
+  .price-notes{ margin-top:16px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
   .price-notes .note{
     font-size:.74rem;
     color:var(--espresso);
@@ -357,29 +301,13 @@
     gap:10px;
     max-height:56vh;
   }
-  .gallery-grid .g-item{
-    border:1px solid var(--gold-pale);
-    border-radius:3px;
-    overflow:hidden;
-  }
-  .gallery-grid .g-main{
-    grid-row:1 / 3;
-    grid-column:1;
-  }
+  .gallery-grid .g-item{ border:1px solid var(--gold-pale); border-radius:3px; overflow:hidden; }
+  .gallery-grid .g-main{ grid-row:1 / 3; grid-column:1; }
   .gallery-grid img{ width:100%; height:100%; object-fit:cover; }
 
   /* ---------- FACILITIES ---------- */
-  .fac-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:10px;
-  }
-  .fac-item{
-    background:var(--cream-deep);
-    border-radius:3px;
-    padding:12px 8px;
-    text-align:center;
-  }
+  .fac-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+  .fac-item{ background:var(--cream-deep); border-radius:3px; padding:12px 8px; text-align:center; }
   .fac-item .dot{
     width:26px;height:26px;
     margin:0 auto 6px;
@@ -393,6 +321,56 @@
   }
   .fac-item p{ font-size:.72rem; color:var(--espresso); line-height:1.25; }
 
+  /* ---------- BUSINESS HUB ---------- */
+  .ph-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:12px; }
+  .ph{
+    aspect-ratio:16/10;
+    background:var(--cream-deep);
+    border:1px solid var(--gold-pale);
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .ph img{ width:100%; height:100%; object-fit:cover; }
+  .biz-details{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .detail-card{ background:var(--cream-deep); border-top:2px solid var(--gold); border-radius:3px; padding:14px; }
+  .detail-card h4{ font-family:'Jost',sans-serif; font-size:.85rem; font-weight:700; margin-bottom:6px; color:var(--coffee-deep); }
+  .detail-card p{ font-size:.78rem; line-height:1.55; color:var(--espresso); margin:0 0 6px; }
+  .biz-price{
+    margin-top:12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    background:var(--coffee-deep);
+    color:var(--gold-pale);
+    border-radius:3px;
+    padding:12px 16px;
+    font-size:.85rem;
+  }
+  .biz-price .btn-mini{ background:var(--gold-bright); color:var(--coffee-deep); }
+
+  /* ---------- AI TECHNOLOGY HUB ---------- */
+  .paith-head{ text-align:center; max-width:820px; margin:0 auto 16px; }
+  .paith-logo{ height:60px; width:auto; margin:0 auto 8px; }
+  .paith-head h2{ font-size:clamp(1.3rem,2.4vw,1.9rem); font-weight:500; margin-bottom:8px; }
+  .paith-head p{ font-size:.86rem; line-height:1.6; color:var(--espresso); margin:0; }
+  .pillar-title{ text-align:center; margin-bottom:10px; }
+  .pillar-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+  .pillar{ background:var(--cream-deep); border-top:2px solid var(--gold); border-radius:3px; padding:14px 10px; text-align:center; }
+  .pillar h4{ font-family:'Jost',sans-serif; font-size:.8rem; font-weight:700; color:var(--coffee-deep); margin-bottom:6px; }
+  .pillar p{ font-size:.74rem; line-height:1.45; color:var(--espresso); margin:0; }
+  .paith-cta{ text-align:center; margin-top:18px; }
+  .paith-cta a{
+    display:inline-block;
+    background:var(--gold-bright);
+    color:var(--coffee-deep);
+    font-weight:600;
+    font-size:.8rem;
+    letter-spacing:.04em;
+    padding:11px 26px;
+    border-radius:3px;
+  }
+
   /* ---------- CONTACT ---------- */
   #contact .page-inner{
     display:grid;
@@ -401,28 +379,17 @@
     align-items:center;
   }
   .contact-block h2{ font-size:clamp(1.3rem,2.6vw,2rem); font-weight:500; margin-bottom:12px; }
-  .contact-item{
-    display:flex;
-    align-items:flex-start;
-    gap:9px;
-    margin-bottom:10px;
-    font-size:.86rem;
-    color:var(--espresso);
-  }
+  .contact-item{ display:flex; align-items:flex-start; gap:9px; margin-bottom:10px; font-size:.86rem; color:var(--espresso); }
   .contact-item span.ic{ color:var(--gold); font-weight:700; }
   .contact-item a{ color:var(--coffee-deep); font-weight:600; }
-  .contact-card{
-    background:var(--cream-deep);
-    border-top:2px solid var(--gold);
-    border-radius:3px;
-    padding:20px;
-  }
+  .contact-card{ background:var(--cream-deep); border-top:2px solid var(--gold); border-radius:3px; padding:20px; }
   .contact-card h3{ font-size:1.05rem; margin-bottom:8px; }
   .contact-card p{ font-size:.82rem; color:var(--espresso); line-height:1.5; margin-bottom:14px; }
-  .contact-card .btn-register{ width:100%; text-align:center; display:block; }
+  .contact-card .btn-register{ width:100%; text-align:center; display:block; margin-top:10px; }
+  .contact-card .btn-register:first-of-type{ margin-top:0; }
   .contact-card .btn-map{ width:100%; text-align:center; display:block; margin-top:10px; }
 
-  /* ---------- FOOTER NAV ---------- */
+  /* ---------- FOOTER ---------- */
   .site-footer{
     background:linear-gradient(0deg, var(--panel), var(--panel-deep));
     border-top:1px solid var(--gold);
@@ -438,20 +405,8 @@
     border-bottom:1px solid rgba(36,24,17,0.2);
   }
   .footer-col h4{ font-size:.85rem; color:var(--coffee-deep); margin-bottom:8px; }
-  .footer-col p, .footer-col a{
-    display:block;
-    font-size:.76rem;
-    color:var(--coffee-deep);
-    opacity:.85;
-    line-height:1.8;
-  }
-  .footer-nav-row{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:4px;
-    flex-wrap:wrap;
-  }
+  .footer-col p, .footer-col a{ display:block; font-size:.76rem; color:var(--coffee-deep); opacity:.85; line-height:1.8; margin:0; }
+  .footer-nav-row{ display:flex; align-items:center; justify-content:center; gap:4px; flex-wrap:wrap; }
   .site-footer a.foot-link{
     font-size:.68rem;
     letter-spacing:.08em;
@@ -462,90 +417,38 @@
     border-radius:3px;
     opacity:.82;
   }
-  .site-footer a.foot-link.active{ color:var(--coffee-deep); background:var(--cream); opacity:1; }
-  .footer-copy{
-    text-align:center;
-    font-size:.68rem;
-    color:var(--coffee-deep);
-    opacity:.7;
-    margin-top:10px;
-  }
-
-  /* ---------- BUSINESS HUB ---------- */
-  #business{ justify-content:flex-start; }
-  .sub-nav{
-    position:sticky;
-    top:var(--header-h);
-    z-index:20;
-    display:flex;
-    justify-content:center;
-    gap:8px;
-    padding:8px 0;
-    background:var(--cream);
-    border-bottom:1px solid var(--line);
-    margin-bottom:8px;
-  }
-  .sub-nav a{
-    font-size:.72rem;
-    font-weight:700;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--coffee-deep);
-    background:var(--cream-deep);
-    padding:7px 16px;
-    border-radius:3px;
-  }
-  .biz-block{ padding:16px 0 22px; scroll-margin-top:calc(var(--header-h) + 48px); border-bottom:1px solid var(--line); }
-  .biz-block:last-child{ border-bottom:none; }
-  .biz-block h3{ font-size:1.35rem; margin-bottom:10px; }
-  .ph-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:12px; }
-  .ph{
-    aspect-ratio:16/10;
-    background:var(--cream-deep);
-    border:1px solid var(--gold-pale);
-    border-radius:3px;
-    overflow:hidden;
-  }
-  .ph img{ width:100%; height:100%; object-fit:cover; }
-  .biz-details{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
-  .biz-details.three{ margin-bottom:12px; }
-  .detail-card{
-    background:var(--cream-deep);
-    border-top:2px solid var(--gold);
-    border-radius:3px;
-    padding:14px;
-  }
-  .detail-card h4{ font-family:'Jost',sans-serif; font-size:.85rem; font-weight:700; margin-bottom:6px; color:var(--coffee-deep); }
-  .detail-card p{ font-size:.78rem; line-height:1.55; color:var(--espresso); margin:0 0 6px; }
-  .detail-card .btn-mini, .biz-block > .btn-mini{ display:inline-block; margin-top:4px; }
-  .facilities-line{ font-size:.78rem; color:var(--espresso); margin:0 0 8px; }
+  .site-footer a.foot-link.active{ background:var(--cream); opacity:1; }
+  .footer-copy{ text-align:center; font-size:.68rem; color:var(--coffee-deep); opacity:.7; margin:10px 0 0; }
 
   /* ---------- RESPONSIVE ---------- */
+  @media (max-width:1100px){
+    .site-nav a{ padding:6px 6px; font-size:.62rem; }
+    .brand-text h1{ font-size:1.05rem; }
+  }
   @media (max-width:900px){
-    #home .page-inner, #location .page-inner, #contact .page-inner{
-      grid-template-columns:1fr;
-    }
+    #home .page-inner, #location .page-inner, #contact .page-inner{ grid-template-columns:1fr; }
+    .home-media .frame, .loc-media .frame{ max-height:44vh; }
     .footer-top{ grid-template-columns:1fr; gap:12px; }
-    .home-media .frame, .loc-media .frame{ max-height:38vh; }
     .price-grid{ grid-template-columns:repeat(2,1fr); }
     .fac-grid{ grid-template-columns:repeat(3,1fr); }
+    .pillar-grid{ grid-template-columns:repeat(2,1fr); }
     .gallery-grid{ grid-template-columns:1fr 1fr; grid-template-rows:auto; max-height:none; }
     .gallery-grid .g-main{ grid-column:1 / 3; grid-row:1; aspect-ratio:3/4; }
   }
   @media (max-width:640px){
-    :root{ --header-h:104px; }
-    .stat-row{ grid-template-columns:repeat(2,1fr); }
+    :root{ --header-h:112px; }
     .site-header{ flex-wrap:wrap; height:auto; padding:8px 12px; row-gap:6px; }
     .brand{ flex:1 1 auto; }
     .btn-register{ order:2; }
     .site-nav{ order:3; width:100%; justify-content:flex-start; overflow-x:auto; margin:0; }
+    .site-nav a{ flex:0 0 auto; padding:6px 8px; font-size:.64rem; }
     section.page{ padding:16px 16px 24px; }
     .fac-grid{ grid-template-columns:repeat(2,1fr); }
     .price-grid{ grid-template-columns:1fr 1fr; }
     .ph-row{ grid-template-columns:1fr 1fr; }
     .biz-details{ grid-template-columns:1fr; }
-    .sub-nav{ gap:4px; }
-    .sub-nav a{ padding:6px 8px; font-size:.62rem; }
+    .biz-price{ flex-direction:column; align-items:flex-start; }
+    .stat-row{ grid-template-columns:repeat(3,1fr); }
   }
 </style>
 </head>
@@ -566,6 +469,7 @@
     <a href="#gallery" data-target="gallery">Gallery</a>
     <a href="#facilities" data-target="facilities">Facilities</a>
     <a href="#business" data-target="business">Business Hub</a>
+    <a href="#paith" data-target="paith">AI Tech Hub</a>
     <a href="#contact" data-target="contact">Contact</a>
   </nav>
   <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSdxx_TUIaHdz9Gw23WXYt-Ez6sXSn2c4PHyB3_QPnFo-c7Blg/viewform?usp=send_form" target="_blank" rel="noopener">Register Now</a>
@@ -577,16 +481,16 @@
   <section id="home" class="page">
     <div class="page-inner">
       <div class="home-copy">
-        <span class="eyebrow-gold">Comfort Just Like Home</span>
-        <h2>A premium residence for professionals, students and overseas Pakistanis — designed for comfort, convenience, security, and a better way of living.
+        <span class="eyebrow-gold">Live Higher</span>
+        <h2>A premium residence for professionals, students and overseas Pakistanis — within a multipurpose plaza featuring an operational AI Technology Hub and a Business Hub.
           <span class="accent">Where accommodation meets home feeling.</span>
         </h2>
-        <a class="home-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdxx_TUIaHdz9Gw23WXYt-Ez6sXSn2c4PHyB3_QPnFo-c7Blg/viewform?usp=send_form" target="_blank" rel="noopener">Register Now</a>
+        <a class="home-cta" href="https://wa.me/923234540454" target="_blank" rel="noopener">BOOK YOUR STAY</a>
 
         <div class="home-facts">
           <div><span>&#9679;</span>Barkat Market Heights, New Garden Town, Lahore</div>
           <div><span>&#9679;</span>24/7 Secure &amp; Managed</div>
-          <div><span>&#9679;</span>0329 9922200</div>
+          <div><span>&#9679;</span>+92 323 4540454</div>
         </div>
 
         <div class="home-extra">
@@ -597,17 +501,22 @@
           <div class="stat"><span>4</span>Room Plans</div>
           <div class="stat"><span>24/7</span>Security &amp; CCTV</div>
           <div class="stat"><span>10+</span>Premium Facilities</div>
-          <div class="stat"><span>Oct 1</span>Opening 2026</div>
         </div>
       </div>
 
       <div class="home-media">
-        <div class="line coworking-line">
-          <div class="cw-text">
-            <b>Business Hub</b> — corporate offices, private offices &amp; commercial spaces.
-            <span class="cw-sub">Ideal for schools, academies, clinics, private sector offices and freelancers.</span>
+        <div class="line">
+          <div class="note-text">
+            <b>Business Hub</b> — offices, academies &amp; commercial spaces.
+            <span class="note-sub">Ideal for schools, academies, clinics, private sector offices and freelancers.</span>
           </div>
           <a class="btn-mini" href="#business">View</a>
+        </div>
+        <div class="line">
+          <div class="note-text">
+            <b>AI Technology Hub</b> — software house, co-working space and technical AI education.
+          </div>
+          <a class="btn-mini" href="#paith">View</a>
         </div>
         <div class="frame"><img src="pic.png" alt="Barkat Market Heights building"></div>
         <p class="caption">Facilities: <b>WiFi · AC · Mess · Gym</b></p>
@@ -640,8 +549,8 @@
   <section id="pricing" class="page">
     <div class="page-inner">
       <div class="section-head">
-        <span class="eyebrow-gold">Our Plans</span>
-        <h2>Pricing</h2>
+        <span class="eyebrow-gold">Boys Residence</span>
+        <h2>Pricing for Boys Residence</h2>
       </div>
       <div class="price-grid">
         <div class="price-card">
@@ -659,13 +568,13 @@
         <div class="price-card">
           <span class="tag">3-Bed</span>
           <h3>Shared Room</h3>
-          <div class="amount">PKR 25,000</div>
+          <div class="amount">PKR 22,500</div>
           <div class="per">/ month / person</div>
         </div>
         <div class="price-card">
           <span class="tag">4-Bed</span>
           <h3>Shared Room</h3>
-          <div class="amount">PKR 22,500</div>
+          <div class="amount">PKR 20,000</div>
           <div class="per">/ month / person</div>
         </div>
       </div>
@@ -698,8 +607,8 @@
   <section id="facilities" class="page">
     <div class="page-inner">
       <div class="section-head">
-        <span class="eyebrow-gold">Premium Facilities</span>
-        <h2>Everything Included</h2>
+        <span class="eyebrow-gold">Boys Residence Facilities</span>
+        <h2>Boys Residence Facilities — Everything Included</h2>
         <p class="section-sub">Every plan comes fully equipped — no hidden extras, just move in and settle down.</p>
       </div>
       <div class="fac-grid">
@@ -727,97 +636,64 @@
   <section id="business" class="page">
     <div class="page-inner">
       <div class="section-head">
-        <span class="eyebrow-gold">Offices &amp; Commercial Spaces</span>
-        <h2>Business Hub</h2>
-        <p class="section-sub">Painted walls, floors and ceilings, professionally managed. Daily cleaning and direct parking access.</p>
+        <span class="eyebrow-gold">Business Hub</span>
+        <h2>Commercial Space — 4,500 sq ft</h2>
+        <p class="section-sub">Well-maintained, furnished rooms with all the furniture required for living.</p>
       </div>
 
-      <nav class="sub-nav">
-        <a href="#biz-commercial">Commercial Space</a>
-        <a href="#biz-single">Private Offices</a>
-        <a href="#biz-corporate">Corporate Offices</a>
-      </nav>
+      <div class="ph-row">
+        <div class="ph"><img src="p1.png" alt="Commercial space photo 1"></div>
+        <div class="ph"><img src="p2.png" alt="Commercial space photo 2"></div>
+        <div class="ph"><img src="p3.png" alt="Commercial space photo 3"></div>
+        <div class="ph"><img src="p4.png" alt="Commercial space photo 4"></div>
+      </div>
 
-      <!-- Commercial -->
-      <div class="biz-block" id="biz-commercial">
-        <h3>Commercial Space</h3>
-        <div class="ph-row">
-          <div class="ph"><img src="c1.png" alt="Commercial space photo 1"></div>
-          <div class="ph"><img src="c2.png" alt="Commercial space photo 2"></div>
-          <div class="ph"><img src="c3.png" alt="Commercial space photo 3"></div>
-          <div class="ph"><img src="c4.png" alt="Commercial space photo 4"></div>
+      <div class="biz-details">
+        <div class="detail-card">
+          <h4>Total Area: 4,500 sq ft</h4>
+          <p>15 well-maintained, furnished rooms with the required furniture for living.</p>
+          <p>10 washrooms and bathing shower areas.</p>
         </div>
-        <div class="biz-details">
-          <div class="detail-card">
-            <h4>Hall Area: 1,421 sq ft</h4>
-            <p>Ideal for cafés, gyms and other commercial use.</p>
-          </div>
-          <div class="detail-card">
-            <h4>Facilities</h4>
-            <p>Daily cleaning · Direct parking access · Window wall with parking view · Spacious open area · Painted walls, floor &amp; ceiling · Professional management</p>
-          </div>
-          <div class="detail-card">
-            <h4>Price</h4>
-            <p>To be revealed soon.</p>
-            <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book on WhatsApp</a>
-          </div>
+        <div class="detail-card">
+          <h4>Facilities</h4>
+          <p>Separate sub meter for each room · 10 washrooms · Bathing shower areas · Furnished rooms with required furniture</p>
+        </div>
+        <div class="detail-card">
+          <h4>Can Be Used For</h4>
+          <p>Airbnb or a mini hotel · Private academies or universities for classes · 15 individual office spaces</p>
         </div>
       </div>
 
-      <!-- Private offices -->
-      <div class="biz-block" id="biz-single">
-        <h3>Private Offices</h3>
-        <div class="ph-row">
-          <div class="ph"><img src="p1.png" alt="Private office photo 1"></div>
-          <div class="ph"><img src="p2.png" alt="Private office photo 2"></div>
-          <div class="ph"><img src="p3.png" alt="Private office photo 3"></div>
-          <div class="ph"><img src="p4.png" alt="Private office photo 4"></div>
-        </div>
-        <div class="biz-details three">
-          <div class="detail-card">
-            <h4>Small Office</h4>
-            <p>Size: 11 x 11 ft</p>
-            <p>Price: PKR 55,000 / month</p>
-          </div>
-          <div class="detail-card">
-            <h4>Medium Office</h4>
-            <p>Size: 14 x 12 ft</p>
-            <p>Price: PKR 65,000 / month</p>
-          </div>
-          <div class="detail-card">
-            <h4>Large Office</h4>
-            <p>Size: 14 x 15 ft</p>
-            <p>Price: PKR 75,000 / month</p>
-          </div>
-        </div>
-        <p class="facilities-line">Facilities: Daily cleaning · Direct parking access · Painted walls, floor &amp; ceiling · Professional management</p>
-        <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book on WhatsApp</a>
+      <div class="biz-price">
+        <span>Price can be discussed on WhatsApp.</span>
+        <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Discuss on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI TECHNOLOGY HUB -->
+  <section id="paith" class="page">
+    <div class="page-inner">
+      <div class="paith-head">
+        <img class="paith-logo" src="paith.png" alt="PAITH logo">
+        <span class="eyebrow-gold">AI Technology Hub</span>
+        <h2>Pakistan's First AI &amp; Technology Hub — Now Operational</h2>
+        <p>The first Pakistan Artificial Intelligence and Technology Hub is now operational in Barkat Market Heights. PAITH brings together artificial intelligence, software development, digital growth, and practical technology education to help businesses and people build what comes next.</p>
       </div>
 
-      <!-- Corporate offices -->
-      <div class="biz-block" id="biz-corporate">
-        <h3>Corporate Offices</h3>
-        <div class="ph-row">
-          <div class="ph"><img src="p1.png" alt="Corporate office photo 1"></div>
-          <div class="ph"><img src="p2.png" alt="Corporate office photo 2"></div>
-          <div class="ph"><img src="p3.png" alt="Corporate office photo 3"></div>
-          <div class="ph"><img src="p4.png" alt="Corporate office photo 4"></div>
-        </div>
-        <div class="biz-details">
-          <div class="detail-card">
-            <h4>Whole Floor: 4,500 sq ft</h4>
-            <p>15 collective offices on one floor. Suitable for companies, academies and schools.</p>
-          </div>
-          <div class="detail-card">
-            <h4>Facilities</h4>
-            <p>Well-furnished, well-built rooms · AC in all rooms · Daily cleaning · Direct parking access · Professional management</p>
-          </div>
-          <div class="detail-card">
-            <h4>Price</h4>
-            <p>Consult on WhatsApp.</p>
-            <a class="btn-mini" href="https://wa.me/923086430502" target="_blank" rel="noopener">Book on WhatsApp</a>
-          </div>
-        </div>
+      <div class="pillar-title">
+        <span class="eyebrow-gold">Five Pillars · The PAITH Ecosystem</span>
+      </div>
+      <div class="pillar-grid">
+        <div class="pillar"><h4>PAITH Technologies</h4><p>AI, automation, software, web and mobile development.</p></div>
+        <div class="pillar"><h4>PAITH Digital</h4><p>Marketing, branding, performance campaigns and e-commerce.</p></div>
+        <div class="pillar"><h4>PAITH Education</h4><p>Practical programmes with a Canadian degree or certificate pathway.</p></div>
+        <div class="pillar"><h4>PAITH Community</h4><p>Workshops, bootcamps, talks and networking.</p></div>
+        <div class="pillar"><h4>PAITH Co-working</h4><p>A 20-desk professional workspace.</p></div>
+      </div>
+
+      <div class="paith-cta">
+        <a href="https://paith.org" target="_blank" rel="noopener">View More Details</a>
       </div>
     </div>
   </section>
@@ -829,12 +705,13 @@
         <span class="eyebrow-gold">Get In Touch</span>
         <h2>Contact Us</h2>
         <div class="contact-item"><span class="ic">&#9679;</span>Barkat Market Heights, Main Barkat Market, New Garden Town, Lahore, Pakistan</div>
-        <div class="contact-item"><span class="ic">&#9679;</span><a href="tel:03299922200">0329 9922200</a></div>
-        <div class="contact-item"><span class="ic">&#9679;</span><a href="https://wa.me/923086430502" target="_blank" rel="noopener">WhatsApp: +92 308 6430502</a></div>
+        <div class="contact-item"><span class="ic">&#9679;</span><a href="tel:+923234540454">+92 323 4540454</a></div>
+        <div class="contact-item"><span class="ic">&#9679;</span><a href="https://wa.me/923234540454" target="_blank" rel="noopener">WhatsApp: +92 323 4540454</a></div>
       </div>
       <div class="contact-card">
-        <h3>Book Your Slot</h3>
-        <p>Operational from 1st October, 2026. Secure your room today by completing the registration form or reaching out to us directly.</p>
+        <h3>Book Your Stay</h3>
+        <p>Secure your room today by messaging us on WhatsApp or completing the registration form.</p>
+        <a class="btn-register" href="https://wa.me/923234540454" target="_blank" rel="noopener">Book on WhatsApp</a>
         <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLSdxx_TUIaHdz9Gw23WXYt-Ez6sXSn2c4PHyB3_QPnFo-c7Blg/viewform?usp=send_form" target="_blank" rel="noopener">Register Now</a>
         <a class="btn-map" href="https://www.google.com/maps/place/Barkat+market+heights+(Boys+hostel+and+male+residence)/@31.4993217,74.3191458,17z/data=!3m1!4b1!4m6!3m5!1s0x3919051c338ee383:0x7b12a7c89c9768d0!8m2!3d31.4993172!4d74.3217261!16s%2Fg%2F11nr3hbwfp?entry=ttu&g_ep=EgoyMDI2MDkyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">See on Maps</a>
       </div>
@@ -847,18 +724,17 @@
   <div class="footer-top">
     <div class="footer-col">
       <h4>Barkat Market Heights</h4>
-      <p>A premium managed residence for professionals, students and overseas Pakistanis in New Garden Town, Lahore.</p>
+      <p>A multipurpose plaza in New Garden Town, Lahore — a premium boys' residence, an AI Technology Hub and a Business Hub.</p>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
-      <a href="tel:03299922200">0329 9922200</a>
-      <a href="https://wa.me/923086430502" target="_blank" rel="noopener">WhatsApp: +92 308 6430502</a>
+      <a href="tel:+923234540454">+92 323 4540454</a>
+      <a href="https://wa.me/923234540454" target="_blank" rel="noopener">WhatsApp: +92 323 4540454</a>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxx_TUIaHdz9Gw23WXYt-Ez6sXSn2c4PHyB3_QPnFo-c7Blg/viewform?usp=send_form" target="_blank" rel="noopener">Register online</a>
     </div>
     <div class="footer-col">
       <h4>Visit</h4>
       <p>Main Barkat Market, New Garden Town, Lahore, Punjab, Pakistan</p>
-      <p>Operational from 1st October, 2026</p>
     </div>
   </div>
   <nav class="footer-nav-row">
@@ -868,9 +744,10 @@
     <a href="#gallery" data-target="gallery" class="foot-link">Gallery</a>
     <a href="#facilities" data-target="facilities" class="foot-link">Facilities</a>
     <a href="#business" data-target="business" class="foot-link">Business Hub</a>
+    <a href="#paith" data-target="paith" class="foot-link">AI Tech Hub</a>
     <a href="#contact" data-target="contact" class="foot-link">Contact</a>
   </nav>
-  <p class="footer-copy">© 2026 Barkat Market Heights — Premium Boys' Residence. All rights reserved.</p>
+  <p class="footer-copy">© 2026 Barkat Market Heights. All rights reserved.</p>
 </footer>
 
 <script>
